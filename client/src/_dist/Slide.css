@@ -1,0 +1,24 @@
+.slide {
+  display: none;
+  height: 100%;
+}
+.active {
+  display: block;
+  height: 100% !important;
+}
+.slides-container {
+  height: 100%;
+}
+.item {
+  position: relative;
+  /* .esd_sys_flex-box-centred; */
+  height: 100%;
+  width: 100%;
+}
+.overlay {
+  height: 60%;
+  width: 100%;
+  /*  background-color: @esd_ref_erathis-bg-transparent; */
+  position: absolute;
+  z-index: 5;
+}

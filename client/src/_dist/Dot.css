@@ -1,0 +1,16 @@
+.active-dot {
+  /*   background: @esd_ref_dm-elements !important; */
+}
+.dots-container {
+  /*  .esd_sys_flex-box-centred; */
+  bottom: 2%;
+  position: absolute;
+  width: 100%;
+}
+.dot {
+  /*   background-color: @esd_ref_dark-grey;
+  border-radius: @esd_ref_border_radius_small;
+  height: @esd_ref_border_radius_small; */
+  margin: 0 5px;
+  width: 30px;
+}

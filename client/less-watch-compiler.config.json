@@ -1,0 +1,9 @@
+{
+    "allowedExtensions":[".less"],
+    "enableJs": true,
+    "minified": true,
+    "includeHidden": true,
+    "sourceMap": true,
+    "watchFolder": "src/assets",
+    "outputFolder": "src/_dist"
+}
