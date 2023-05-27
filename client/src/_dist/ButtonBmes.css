@@ -379,3 +379,83 @@
 /* Colors */
 /* Font family */
 /* Shadow */
+.bmes-primary {
+  width: 140px;
+  height: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #0d0e52;
+  border: none;
+  border-radius: 11px;
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25)) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.bmes-primary:active {
+  transform: scale(0.9);
+}
+.bmes-secondary {
+  width: 140px;
+  height: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #1a2bc2;
+  border: none;
+  border-radius: 11px;
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25)) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.bmes-secondary:active {
+  transform: scale(0.9);
+}
+.bmes-tertiary {
+  width: 140px;
+  height: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000000;
+  background-color: #a3d6fa;
+  border: none;
+  border-radius: 11px;
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25)) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.bmes-tertiary:active {
+  transform: scale(0.9);
+}
+.bmes-warning {
+  width: 140px;
+  height: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #d72638;
+  border: none;
+  border-radius: 11px;
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25)) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.bmes-warning:active {
+  transform: scale(0.9);
+}

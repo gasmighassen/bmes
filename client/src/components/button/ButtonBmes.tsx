@@ -1,11 +1,21 @@
-import React from 'react'
+import { ButtonHTMLAttributes } from "react";
+import "../../_dist/ButtonBmes.css";
 
-type Props = {}
-
-const ButtonBmes = (props: Props) => {
-  return (
-    <div>ButtonBmes</div>
-  )
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "secondary" | "tertiary"|"warning";
 }
 
-export default ButtonBmes
+const ButtonBmes = ({ variant = "primary", ...props }: ButtonProps) => {
+  return (
+    <button
+      {...props}
+      className={`bmes-${variant}${
+        props.className === undefined ? "" : ` ${props.className}`
+      }`}
+    >
+      {props.children}
+    </button>
+  );
+};
+
+export default ButtonBmes;
