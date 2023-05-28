@@ -1,10 +1,17 @@
 import React from 'react'
+import NavbarBmes from '../navbar/NavbarBmes'
+import { Outlet } from 'react-router-dom'
 
 type Props = {}
 
 const Layout = (props: Props) => {
   return (
-    <div>Layout</div>
+    <>
+      <NavbarBmes/>
+      <div className='bmes__outlet'>
+        <Outlet/>
+      </div>
+    </>
   )
 }
 
