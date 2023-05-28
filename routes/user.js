@@ -29,7 +29,7 @@ router.post("/login", loginRules(), validation, async (req, res) => {
       name: searchedUser.name,
     };
     const token = await jwt.sign(payload, process.env.SecretOrKey, {
-      expiresIn: 100000,
+      expiresIn: 15000,
     });
 
     //send the user
@@ -53,6 +53,9 @@ router.put("/update/:id", async (req, res) => {
     );
     res.status(200).send({ newProfile: result, msg: "profile updated.." });
   } catch (error) {
+    if (!id){
+      throw new NotFound
+    }
     res.status(500).send("cannot update the profile..");
     console.log(error);
   }
