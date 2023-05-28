@@ -10,10 +10,10 @@ const NavbarBmes = (props: Props) => {
     <div className="bmes__navbar">
       
       <div className={`nav__items ${open && "open"}`}>
-        <Link className="nav__item" to={"/"}>Home</Link>
+        <Link className="nav__item" to={"/"}>Acceuil</Link>
         <Link className="nav__item" to={"/services"}>Services</Link>
-        <Link className="nav__item" to={"/about"}>About</Link>
-        <Link className="nav__item" to={"/contact"}>Contact</Link>
+        <Link className="nav__item" to={"/about"}>A Propos</Link>
+        <Link className="nav__item" to={"/contact"}>Contactez-nous</Link>
       </div>
       <div
         className={`nav-toggle ${open && "open"}`}

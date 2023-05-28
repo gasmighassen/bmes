@@ -1,22 +1,21 @@
-
 @import "./preset.less";
 
 .bmes__navbar {
-  height: 20vh;
+  height: 7vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: transparent;
- 
+  position: fixed;
+  z-index: 100;
   width: 100vw;
   filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25))
-  drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+    drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
 }
 .bmes__logo {
   height: 100%;
   width: 21%;
-  padding-right: 4%;
-  padding-bottom: 2%;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,9 +34,9 @@
   opacity: 0.9;
 }
 .bmes__navbar > .nav__items > .nav__item {
-    color: @bmes_primary;
-    font-family: @bmes_poppins;
-    font-size:1rem;
+  color: @bmes_primary;
+  font-family: @bmes_poppins;
+  font-size: 1rem;
   text-decoration: none;
   margin: 15px;
   position: relative;
@@ -69,16 +68,16 @@
 @media (max-width: 700px) {
   .bmes__navbar > .nav__items {
     position: absolute;
-    top: 18vh;
+    top: 10vh;
     display: flex;
     flex-direction: column;
-    background: @bmes_tertiary;
+    background-color: rgba(255, 255, 255, 0.486);
     left: 2px;
     width: 100%;
     transform: translateX(-110%);
     transition: all 0.45s;
     filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25))
-  drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+      drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
   }
 
   .bmes__navbar > .nav__items > .nav__item ::before {
