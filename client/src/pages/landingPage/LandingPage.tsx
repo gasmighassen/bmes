@@ -9,8 +9,8 @@ const LandingPage = (props: Props) => {
       <div className="slougan-bmes">
         <div className="slougan-text">
           <p>
-            Une nouvelle
-            <span className="bmes-blue">perspective</span>
+            Une nouvelle 
+            <span className="bmes-blue"> perspective</span>
             <br></br> pour une meilleure{" "}
             <span className="bmes-blue">construction</span>
           </p>
