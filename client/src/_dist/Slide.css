@@ -1,6 +1,6 @@
 .slide {
   display: none;
-  height: 100%;
+  height: 100vh;
 }
 .active {
   display: block;
@@ -11,14 +11,20 @@
 }
 .item {
   position: relative;
-  /* .esd_sys_flex-box-centred; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
+}
+.item img {
+  width: 100%;
+  height: 100%;
 }
 .overlay {
   height: 60%;
   width: 100%;
-  /*  background-color: @esd_ref_erathis-bg-transparent; */
+  background-color: transparent;
   position: absolute;
   z-index: 5;
 }

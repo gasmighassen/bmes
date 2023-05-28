@@ -1,14 +1,11 @@
-
+import "../../_dist/Dot.css";
 
 interface DotProps {
   isActive: boolean;
   onClick: () => void;
 }
 
-const Dot: React.FC<DotProps> = ({
-  isActive,
-  onClick,
-}) => {
+const Dot: React.FC<DotProps> = ({ isActive, onClick }) => {
   return (
     <span
       className={`dot ${isActive ? "active-dot" : ""}`}
