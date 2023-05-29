@@ -1,0 +1,56 @@
+@import "./preset.less";
+
+.bmes__footer {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  p,
+  a {
+    font-family: @bmes_montserrat;
+    font-weight: 200;
+    text-decoration: none;
+    &:visited {
+      color: black;
+    }
+  }
+}
+.bmes__footer__item {
+  flex-basis: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 2%;
+  gap: 3vh;
+}
+.social__media {
+  flex-basis: 33%;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.bmes__footer_details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.copyrights {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  padding: 5% 0;
+}
+@media (max-width: 700px) {
+  .bmes__footer {
+    p,
+    a {
+      font-size: 11px;
+    }
+  }
+}
