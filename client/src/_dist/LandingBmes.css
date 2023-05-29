@@ -387,6 +387,9 @@
   align-items: center;
   background-color: #d6dee9;
   flex-direction: column;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
   background-image: url(../../public/images/caroussel-image-2.jpg);
   background-size: cover;
 }
@@ -403,7 +406,7 @@
   justify-content: center;
 }
 .slougan-text {
-  font-size: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 12px;
   text-align: left;

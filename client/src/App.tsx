@@ -8,16 +8,16 @@ import ContactUs from "./pages/contactUs/ContactUs";
 
 function App() {
   return (
-    <div className="App">
-     <Routes >
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<LandingPage/>}/>
-          <Route path="services" element={<Service/>}/>
-          <Route path="about" element={<About/>}/>
-          <Route path="contact" element={<ContactUs/>}/>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<LandingPage />} />
+          <Route path="services" element={<Service />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<ContactUs />} />
         </Route>
-     </Routes>
-    </div>
+      </Routes>
+    </>
   );
 }
 
