@@ -7,14 +7,13 @@
   justify-content: center;
   background-color: rgba(254, 254, 255, 0.461);
   width: 100%;
-  padding: 12% 0;
+  padding: 5% 0;
 }
 .bmes__service {
-  padding: 5% 0;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 4%;
 }
 .bmes__service__image {
@@ -24,11 +23,12 @@
     drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
   img {
     width: 100%;
-    height: 100%;
+    height: 80%;
     object-fit: cover;
   }
 }
 .bmes__service__detail {
+  padding: 5% 0;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -49,6 +49,15 @@
   font-weight: 700;
   font-size: 31px;
   text-transform: uppercase;
+}
+.savoir__plus {
+  font-weight: 200;
+  letter-spacing: 1rem;
+  cursor: pointer;
+}
+.moins {
+  letter-spacing: normal;
+  text-decoration: underline;
 }
 @media (max-width: 700px) {
   .bmes__service_title {
