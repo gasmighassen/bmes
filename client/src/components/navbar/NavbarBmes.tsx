@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "../../_dist/NavBarBmes.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const NavbarBmes = (props: Props) => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   return (
     <div className="bmes__navbar">
       <div className={`nav__items ${open && "open"}`}>
-        
         <Link className="nav__item" to={"/"}>
           Acceuil
         </Link>
@@ -30,7 +30,11 @@ const NavbarBmes = (props: Props) => {
         <div className="bar"></div>
       </div>
       <div className="bmes__logo">
-        <img src="/images/logo-bmes-01.svg" alt="" />
+        <img
+          src="/images/logo-bmes-01.svg"
+          alt=""
+          onClick={() => navigate("/")}
+        />
       </div>
     </div>
   );
