@@ -380,7 +380,6 @@
 /* Font family */
 /* Shadow */
 .bmes__footer {
-  height: 10vh;
   width: 100%;
   display: flex;
   flex-direction: column;
