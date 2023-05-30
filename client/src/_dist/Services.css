@@ -391,7 +391,7 @@
 .bmes__service {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
   gap: 4%;
 }
@@ -399,11 +399,13 @@
   height: 100vh;
   width: 30%;
   filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25)) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+  padding: 5% 0;
 }
 .bmes__service__image img {
   width: 100%;
   height: 80%;
   object-fit: cover;
+  border-radius: 11px;
 }
 .bmes__service__detail {
   padding: 5% 0;
@@ -429,7 +431,7 @@
 }
 .savoir__plus {
   font-weight: 200;
-  letter-spacing: 1rem;
+  letter-spacing: 8px;
   cursor: pointer;
 }
 .moins {
@@ -443,6 +445,7 @@
   .bmes__service {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
   }
   .bmes__service__detail {
     padding-top: 5%;
@@ -454,9 +457,12 @@
     font-size: 1rem;
   }
   .bmes__service__image {
-    width: 90%;
+    width: 100%;
     height: 50%;
     padding-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .bmes__special__list {

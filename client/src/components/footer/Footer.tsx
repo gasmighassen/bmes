@@ -1,4 +1,3 @@
-import React from "react";
 import "../../_dist/Footer.css";
 import {
   FacebookFilled,
@@ -6,6 +5,7 @@ import {
   LinkedinFilled,
   TwitterOutlined,
 } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 type Props = {};
 
 const Footer = (props: Props) => {
@@ -15,7 +15,7 @@ const Footer = (props: Props) => {
         <div className="bmes__footer__item">
           <p>Gabes,Tunisia</p>
           <p>+216 00 000 000</p>
-          <a href="">example@example.com</a>
+          <Link to={"/"}>example@example.com</Link>
         </div>
         <div className="social__media">
           <FacebookFilled />
@@ -24,10 +24,10 @@ const Footer = (props: Props) => {
           <TwitterOutlined />
         </div>
         <div className="bmes__footer__item">
-          <a href="">Accueil</a>
-          <a href="">Services</a>
-          <a href="">A Propos</a>
-          <a href="">Contactez-nous</a>
+          <Link to={"/"}>Accueil</Link>
+          <Link to={"/services"}>Services</Link>
+          <Link to={"/about"}>A Propos</Link>
+          <Link to={"/contact"}>Contactez-nous</Link>
         </div>
       </div>
 
