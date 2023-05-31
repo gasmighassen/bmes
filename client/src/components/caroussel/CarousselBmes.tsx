@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Dot from "./Dot";
 import Slide from "./Slides";
+import "../../_dist/Caroussel.css";
 
 interface CarousselProps {
   children: React.ReactNode;
@@ -60,7 +61,7 @@ const CarousselBmes: React.FC<CarousselProps> = ({
           </Slide>
         ))}
       </div>
-     {/*  <div className="dots-container">
+      <div className="dots-container">
         {Array.from({
           length: renderDotsEndIndex - renderDotsStartIndex + 1,
         }).map((_, index) => (
@@ -70,7 +71,7 @@ const CarousselBmes: React.FC<CarousselProps> = ({
             onClick={() => handleChooseSlide(renderDotsStartIndex + index)}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };

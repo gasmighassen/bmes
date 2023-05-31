@@ -1,49 +1,75 @@
 @import "./preset.less";
 
 .bmes-landing {
-  width: 100%;
-  height: 100vh;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  background-color: #d6dee9;
+  justify-content: center;
   flex-direction: column;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  background-image: url(../../public/images/caroussel-image-2.jpg);
-  background-size: cover;
 }
-.caroussel {
-  width: 100%;
-  height: 100vh;
-}
-.slougan-bmes {
-  position: relative;
-  height: 100vh;
+.bmes__upper__caroussel {
+  z-index: 1;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.slougan-text {
-  font-family: @bmes_poppins;
-  font-weight: 400;
-  font-size: 12px;
-  text-align: left;
-  line-height: 3rem;
-  min-width: 60%;
-  letter-spacing: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1%;
-  border-radius: 7px;
-  background-color: rgba(255, 255, 255, 0.486);
-  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25))
-    drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+.bmes__landing__caroussel__item {
+  width: 100%;
+  height: 70vh;
+  position: relative; /* Add this line */
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute; /* Add this line */
+    top: 0; /* Add this line */
+    left: 0; /* Add this line */
+  }
 }
-.bmes-blue {
-  color: @bmes_primary;
-  font-size: 27px;
+.bmes__who_are_we {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #0d0e52de;
+  color: #ffffff;
+  padding: 2%;
+  gap: 2%;
+  span {
+    color: @bmes_tertiary;
+  }
+  h1 {
+    color: @bmes_white;
+    font-family: @bmes_poppins;
+    width: 80%;
+    font-size: 25px;
+  }
+}
+.bmes__who__are_we_text {
+  width: 80%;
+  flex-basis: 30%;
+  font-family: @bmes_montserrat;
+  font-weight: 300;
+  line-height: 2rem;
+  font-size: 1rem;
+  padding: 5% 0;
+}
+.bmes__landing__cards {
+  width: 80%;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 5% 0;
+}
+@media (max-width: 700px) {
+  .bmes__who__are_we_text {
+    flex-basis: 100%;
+    p {
+      font-size: 13px;
+    }
+  }
 }
