@@ -11,9 +11,8 @@ const Layout = (props: Props) => {
     <section id="bmes__main">
       <NavbarBmes />
       <div className="bmes__outlet">
-        <Outlet />
+        <Outlet /> <Footer />
       </div>
-      <Footer />
     </section>
   );
 };
