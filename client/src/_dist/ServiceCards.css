@@ -379,145 +379,57 @@
 /* Colors */
 /* Font family */
 /* Shadow */
-.bmes__navbar {
-  height: 15vh;
-  grid-column: 1/13;
-  grid-row: 1/1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-  width: 100%;
-  background-color: #ffffff;
+.bmes__services_section {
   filter: drop-shadow(0px 7px 3px rgba(0, 0, 0, 0.25)) drop-shadow(0px 3px 7px rgba(0, 0, 0, 0.25));
-  position: fixed;
-  top: 0;
+  background-color: #0d0e52;
+  color: white;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
-.active__nav__item {
-  text-decoration: none;
-  color: #0d0e52;
+.bmes__services_section h1 {
+  font-family: "Montserrat", sans-serif;
+}
+.bmes__service__cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.bmes__service__card_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+}
+.bmes__service__card_text p {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 13px;
 }
-.bmes__logo {
-  height: 100%;
-  width: 21%;
+.bmes__service__card_text h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+}
+.bmes__card__icon {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.bmes__logo img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1/1;
-  cursor: pointer;
+.bmes__card__icon svg {
+  height: 100px !important;
+  width: 100px !important;
 }
-.nav__items {
-  color: #ffffff;
-  font-size: 16px;
-  text-decoration: none;
-  position: relative;
+.bmes__card__lower {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 4%;
-  width: 55%;
-  padding-left: 2%;
-}
-.bmes__navbar > .nav__items > .nav__item {
-  color: #0d0e52;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  text-decoration: none;
-  position: relative;
-  opacity: 0.9;
-}
-.bmes__navbar > .nav__items > .nav__item :hover {
-  opacity: 1;
-}
-.bmes__navbar > .nav__items > .nav__item ::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: #ffffff;
-  transition: all 0.45s;
-}
-.bmes__navbar > .nav__items > .nav__item :hover::before {
-  width: 100%;
-}
-.bmes__navbar > .nav-toggle {
-  display: none;
-}
-@media (max-width: 700px) {
-  .bmes__navbar > .nav__items {
-    position: absolute;
-    top: 113px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #ffffff;
-    left: 17px;
-    width: 100%;
-    transform: translateX(-110%);
-    transition: all 0.45s;
-    filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25)) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
-    padding: 2%;
-    height: 30vh;
-  }
-  .bmes__navbar > .nav__items > .nav__item ::before {
-    background: transparent;
-  }
-  .bmes__navbar > .nav__items.open {
-    transform: translateX(-17px);
-    z-index: 100;
-  }
-  .bmes__navbar > .nav-toggle {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 100;
-  }
-  .nav-toggle > .bar {
-    position: relative;
-    width: 32px;
-    height: 2px;
-    background: #0d0e52;
-    transition: all 0.45s ease-in-out;
-    z-index: 100;
-  }
-  .nav-toggle > .bar::before,
-  .nav-toggle > .bar::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    background: #0d0e52;
-    border-radius: 2px;
-    transition: all 0.45s ease-in-out;
-  }
-  .nav-toggle > .bar::before {
-    width: 25px;
-    transform: translateY(-8px);
-    right: 0;
-  }
-  .nav-toggle > .bar::after {
-    width: 32px;
-    transform: translateY(8px);
-  }
-  .nav-toggle.open > .bar {
-    transform: translateX(-40px);
-    background: transparent;
-  }
-  .nav-toggle.open > .bar::before {
-    width: 32px;
-    transform: rotate(45deg) translate(26px, -26px);
-  }
-  .nav-toggle.open > .bar::after {
-    transform: rotate(-45deg) translate(26px, 26px);
-  }
+  justify-content: center;
+  gap: 1rem;
 }

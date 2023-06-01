@@ -1,0 +1,25 @@
+@import "./preset.less";
+
+.bmes__service__card__container {
+  flex-basis: 30%;
+
+  background-color: aliceblue;
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+  color: @bmes_primary;
+  padding: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  align-self: normal;
+}
+.hide {
+  display: none;
+}
+@media (max-width: 700px) {
+  .bmes__service__card__container {
+    flex-basis: 100%;
+  }
+}

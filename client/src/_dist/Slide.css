@@ -7,6 +7,7 @@
   height: 100% !important;
 }
 .slides-container {
+  filter: brightness(70%);
   height: 100%;
 }
 .item {
