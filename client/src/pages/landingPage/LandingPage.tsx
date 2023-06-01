@@ -4,6 +4,7 @@ import "../../_dist/LandingBmes.css";
 import CarousselBmes from "../../components/caroussel/CarousselBmes";
 import "animate.css";
 import CardBmes from "../../components/card/CardBmes";
+import ServiceCards from "../../components/serviceCards/ServiceCards";
 type Props = {};
 
 const LandingPage = (props: Props) => {
@@ -74,6 +75,8 @@ const LandingPage = (props: Props) => {
           </div>
         </CardBmes>
       </div>
+     
+      <ServiceCards />
     </div>
   );
 };
