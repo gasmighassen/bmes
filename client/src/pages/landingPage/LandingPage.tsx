@@ -1,10 +1,10 @@
-import React from "react";
-import NavbarBmes from "../../components/navbar/NavbarBmes";
 import "../../_dist/LandingBmes.css";
 import CarousselBmes from "../../components/caroussel/CarousselBmes";
 import "animate.css";
 import CardBmes from "../../components/card/CardBmes";
 import ServiceCards from "../../components/serviceCards/ServiceCards";
+import LandingPortfolio from "../../components/LandingPortfolio/LandingPortfolio";
+import BmesMap from "../../components/map/BmesMap";
 type Props = {};
 
 const LandingPage = (props: Props) => {
@@ -75,8 +75,10 @@ const LandingPage = (props: Props) => {
           </div>
         </CardBmes>
       </div>
-     
+
       <ServiceCards />
+      <LandingPortfolio />
+      <BmesMap />
     </div>
   );
 };
