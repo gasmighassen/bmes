@@ -395,7 +395,7 @@
 }
 .active__nav__item {
   text-decoration: none;
-  color: #0d0e52;
+  color: #26396c;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
 }
@@ -425,7 +425,7 @@
   padding-left: 2%;
 }
 .bmes__navbar > .nav__items > .nav__item {
-  color: #0d0e52;
+  color: #26396c;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   text-decoration: none;
@@ -487,7 +487,7 @@
     position: relative;
     width: 32px;
     height: 2px;
-    background: #0d0e52;
+    background: #26396c;
     transition: all 0.45s ease-in-out;
     z-index: 100;
   }
@@ -496,7 +496,7 @@
     content: "";
     position: absolute;
     height: 2px;
-    background: #0d0e52;
+    background: #26396c;
     border-radius: 2px;
     transition: all 0.45s ease-in-out;
   }
