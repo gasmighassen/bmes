@@ -42,7 +42,6 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(
       return () => {
         if (cardRef.current) {
           observer.unobserve(cardRef.current);
-         
         }
       };
     }, []);
