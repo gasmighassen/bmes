@@ -7,7 +7,7 @@
 }
 .bmes__outlet {
   grid-column: 1/13;
-  grid-row: 2/10;
+  grid-row: 3/10;
   height: 100vh;
   overflow: scroll;
   -ms-overflow-style: none;
@@ -17,4 +17,7 @@
 }
 .bmes__outlet::-webkit-scrollbar {
   display: none;
+}
+.service__layout_divider {
+  height: 70% !important;
 }

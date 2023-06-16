@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "../../_dist/NavBarBmes.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 type Props = {};
 

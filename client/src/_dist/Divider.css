@@ -1,5 +1,10 @@
-.bmes__divider {
+.bmes__dividerHorizontal {
   height: 1px;
   width: 90%;
+  background: linear-gradient(90deg, hsla(196, 70%, 33%, 0.219), hsla(196, 100%, 32%, 0.493), hsla(196, 69%, 37%, 0.171));
+}
+.bmes__dividerVertical {
+  height: 100%;
+  width: 2px;
   background: linear-gradient(90deg, hsla(196, 70%, 33%, 0.219), hsla(196, 100%, 32%, 0.493), hsla(196, 69%, 37%, 0.171));
 }

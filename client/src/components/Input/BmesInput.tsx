@@ -13,7 +13,6 @@ const BmesInput = ({ ...props }: InputBmesProps) => {
         }`}
         placeholder={props.placeholder}
       />
-      <Divider className="input__divider"/>
     </div>
   );
 };

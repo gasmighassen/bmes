@@ -5,6 +5,7 @@ import Layout from "./components/layout/Layout";
 import Service from "./pages/service/Service";
 import About from "./pages/about/About";
 import ContactUs from "./pages/contactUs/ContactUs";
+import ServiceLayout from "./components/layout/ServiceLayout";
 
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<LandingPage />} />
-          <Route path="services" element={<Service />} />
+          <Route path="services" element={<ServiceLayout />}>
+            <Route index element={<Service />} />
+          </Route>
+
           <Route path="about" element={<About />} />
           <Route path="contact" element={<ContactUs />} />
         </Route>

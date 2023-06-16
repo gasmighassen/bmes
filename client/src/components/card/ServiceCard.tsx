@@ -44,7 +44,7 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(
           observer.unobserve(cardRef.current);
         }
       };
-    }, []);
+    }, [cardRef.current]); // Include cardRef.current as a dependency
 
     return (
       <div

@@ -5,6 +5,7 @@ import CardBmes from "../../components/card/CardBmes";
 import ServiceCards from "../../components/serviceCards/ServiceCards";
 import LandingPortfolio from "../../components/LandingPortfolio/LandingPortfolio";
 import BmesMap from "../../components/map/BmesMap";
+import Footer from "../../components/footer/Footer";
 type Props = {};
 
 const LandingPage = (props: Props) => {
@@ -79,6 +80,7 @@ const LandingPage = (props: Props) => {
       <ServiceCards />
       <LandingPortfolio />
       <BmesMap />
+      <Footer />
     </div>
   );
 };

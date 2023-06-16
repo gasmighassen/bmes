@@ -1,17 +1,12 @@
-import React from "react";
 import "../../_dist/ServiceCards.css";
 import ServiceCard from "../card/ServiceCard";
-import {
-  BuildOutlined,
-  BulbOutlined,
-  ControlOutlined,
-  LikeOutlined,
-  ToolOutlined,
-} from "@ant-design/icons";
+
 import ButtonBmes from "../button/ButtonBmes";
+import { useNavigate } from "react-router-dom";
 type Props = {};
 
 const ServiceCards = (props: Props) => {
+  const navigate = useNavigate();
   return (
     <div className="bmes__services_section">
       <h1 className="service_title">Nos services</h1>
@@ -31,7 +26,9 @@ const ServiceCards = (props: Props) => {
           </div>
 
           <div className="bmes__service__card_readmore">
-            <ButtonBmes>En savoir plus</ButtonBmes>
+            <ButtonBmes onClick={() => navigate("/services")}>
+              En savoir plus
+            </ButtonBmes>
           </div>
         </ServiceCard>
         <ServiceCard>
@@ -53,7 +50,9 @@ const ServiceCards = (props: Props) => {
           </div>
 
           <div className="bmes__service__card_readmore">
-            <ButtonBmes>En savoir plus</ButtonBmes>
+            <ButtonBmes onClick={() => navigate("/services")}>
+              En savoir plus
+            </ButtonBmes>
           </div>
         </ServiceCard>
         <ServiceCard>
@@ -71,7 +70,9 @@ const ServiceCards = (props: Props) => {
           </div>
 
           <div className="bmes__service__card_readmore">
-            <ButtonBmes>En savoir plus</ButtonBmes>
+            <ButtonBmes onClick={() => navigate("/services")}>
+              En savoir plus
+            </ButtonBmes>
           </div>
         </ServiceCard>
         <ServiceCard>
@@ -93,7 +94,9 @@ const ServiceCards = (props: Props) => {
           </div>
 
           <div className="bmes__service__card_readmore">
-            <ButtonBmes>En savoir plus</ButtonBmes>
+            <ButtonBmes onClick={() => navigate("/services")}>
+              En savoir plus
+            </ButtonBmes>
           </div>
         </ServiceCard>
         <ServiceCard>
@@ -115,7 +118,9 @@ const ServiceCards = (props: Props) => {
           </div>
 
           <div className="bmes__service__card_readmore">
-            <ButtonBmes>En savoir plus</ButtonBmes>
+            <ButtonBmes onClick={() => navigate("/services")}>
+              En savoir plus
+            </ButtonBmes>
           </div>
         </ServiceCard>
       </div>
