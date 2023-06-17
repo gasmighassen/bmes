@@ -387,6 +387,7 @@
 .bmes__landing__portfolio__section h1 {
   font-family: "Montserrat", sans-serif;
   color: #26396c;
+  padding: 5%;
 }
 .bmes__landing__portfolio_wrapper {
   width: 100%;
@@ -405,8 +406,9 @@
 }
 .bmes__landing__portfolio__main_image img {
   width: 100%;
-  min-height: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: fill;
+  aspect-ratio: 1/1;
 }
 .bmes__landing__portfolio__thumbnails {
   gap: 1rem;

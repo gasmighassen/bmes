@@ -380,7 +380,7 @@
 /* Font family */
 /* Shadow */
 .bmes__navbar {
-  height: 15vh;
+  height: 11vh;
   grid-column: 1/13;
   grid-row: 1/1;
   display: flex;

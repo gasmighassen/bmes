@@ -450,6 +450,7 @@
 @media (max-width: 700px) {
   .bmes__who__are_we_text {
     flex-basis: 100%;
+    padding: 5%;
   }
   .bmes__who__are_we_text p {
     font-size: 13px;
@@ -460,5 +461,6 @@
   .bmes__who_are_we h1 {
     font-size: 1.1rem;
     width: 100%;
+    padding: 5%;
   }
 }
