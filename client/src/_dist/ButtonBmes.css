@@ -376,11 +376,18 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLBT5V1s.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Bungee Outline';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bungeeoutline/v18/_6_mEDvmVP24UvU2MyiGDslL3Qg3.ttf) format('truetype');
+}
 /* Colors */
 /* Font family */
 /* Shadow */
 .bmes-primary {
-  width: 140px;
+  width: 100%;
   height: 45px;
   font-family: "Poppins", sans-serif;
   font-size: 11px;
