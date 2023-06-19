@@ -1,29 +1,53 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../../_dist/LandingPortfolio.css";
 import { portfolioImages } from "../../data/PortfolioLandingImages";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+
 type Props = {};
 
 const LandingPortfolio = (props: Props) => {
-  const [mainImg, setMainImg] = useState(portfolioImages[0].url);
+  const [images, setImages] = useState(portfolioImages);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [slideImage, setSlideImage] = useState(images[activeIndex]);
+  const splideRef = useRef(null);
+
+  useEffect(() => {
+    const splideInstance = splideRef.current.splide;
+    splideInstance.on("active", handleSlideChange);
+
+    return () => {
+      splideInstance.off("active", handleSlideChange);
+    };
+  }, []);
+
+  const handleSlideChange = (splide) => {
+    const index = splide.index;
+    setActiveIndex(index);
+    setSlideImage(images[index]);
+  };
+
   return (
     <div className="bmes__landing__portfolio__section">
       <h1 className="bmes__pourquoi">Nos Projets</h1>
-      <div className="bmes__landing__portfolio_wrapper">
-        {" "}
-        <div className="bmes__landing__portfolio__main_image">
-          <img src={mainImg} alt="" />
-        </div>
-        <div className="bmes__landing__portfolio__thumbnails">
-          {portfolioImages.map((image) => (
-            <div key={image.id} className="bmes__landing__thumbnail">
+      <div className="portfolio__main_image">
+        <img src={slideImage.url} alt="" />
+      </div>
+      <div className="bmes__portfolio_container">
+        <Splide ref={splideRef} >
+          {images.map((image, index) => (
+            <SplideSlide
+              className={`bmes__slide ${index === activeIndex ? "active_slide" : ""}`}
+              key={index}
+            >
               <img
                 src={image.url}
-                alt=""
-                onClick={() => setMainImg(image.url)}
+                alt={`Image ${index}`}
+                onClick={() => splideRef.current.splide.go(index)}
               />
-            </div>
+            </SplideSlide>
           ))}
-        </div>
+        </Splide>
       </div>
     </div>
   );
