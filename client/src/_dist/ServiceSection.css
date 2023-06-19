@@ -383,21 +383,96 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/bungeeoutline/v18/_6_mEDvmVP24UvU2MyiGDslL3Qg3.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Bungee Outline';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bungeeoutline/v18/_6_mEDvmVP24UvU2MyiGDslL3Qg3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u-w4BMUTPHjxsIPy-v.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u_w4BMUTPHjxsI9w2PHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u8w4BMUTPHjxswWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u_w4BMUTPHjxsI5wqPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u_w4BMUTPHjxsI3wiPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u8w4BMUTPHh30wWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh7USew8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVew8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh50Xew8.ttf) format('truetype');
+}
 /* Colors */
 /* Font family */
 /* Shadow */
 .bmes__service__details {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   gap: 1rem;
 }
 .bmes__service__banner {
   width: 80%;
-  height: 15%;
+  height: 12vh;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .bmes__service__banner img {
@@ -407,7 +482,8 @@
   border-radius: 14px;
 }
 .bmes__service__content {
-  width: 80%;
+  width: 100%;
+  height: 71vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -434,6 +510,8 @@
   font-size: 16px;
   line-height: 140%;
   font-family: "Montserrat", sans-serif;
+  line-height: 1.7rem;
+  text-align: justify;
 }
 .bmess__service__media {
   padding: 2rem;
@@ -442,9 +520,17 @@
   width: 490px;
   height: 350px;
 }
+.service__title {
+  color: #1b85bd;
+}
 @media (max-width: 700px) {
   .bmes__service__content {
     flex-direction: column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .bmes__service__text_details {
     width: 100%;
@@ -454,11 +540,12 @@
     justify-content: flex-start;
     gap: 1rem;
   }
-  .bmes__service__text_details p,
+  .bmes__service__text_details p {
+    font-size: 13px;
+  }
   .bmes__service__text_details h1 {
     width: 100%;
-    font-size: 11px;
-    line-height: 177%;
+    font-size: 20px;
   }
   .bmess__service__media {
     padding: 2rem;
@@ -475,7 +562,7 @@
   }
   .bmes__service__banner {
     width: 95%;
-    height: 8vh;
+    height: 5vh;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 }

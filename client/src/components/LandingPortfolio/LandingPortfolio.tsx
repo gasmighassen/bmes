@@ -7,7 +7,7 @@ const LandingPortfolio = (props: Props) => {
   const [mainImg, setMainImg] = useState(portfolioImages[0].url);
   return (
     <div className="bmes__landing__portfolio__section">
-      <h1>Portfolio -</h1>
+      <h1 className="bmes__pourquoi">Nos Projets</h1>
       <div className="bmes__landing__portfolio_wrapper">
         {" "}
         <div className="bmes__landing__portfolio__main_image">

@@ -1,16 +1,16 @@
 @import "./preset.less";
 .bmes__service__details {
   width: 100%;
-  height: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+
   gap: 1rem;
 }
 .bmes__service__banner {
   width: 80%;
-  height: 15%;
+  height: 12vh;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   img {
@@ -21,8 +21,8 @@
   }
 }
 .bmes__service__content {
-  width: 80%;
-
+  width: 100%;
+  height: 71vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -48,6 +48,8 @@
     font-size: 16px;
     line-height: 140%;
     font-family: @bmes_montserrat;
+    line-height: 1.7rem;
+    text-align: justify;
   }
 }
 .bmess__service__media {
@@ -57,9 +59,18 @@
     height: 350px;
   }
 }
+.service__title {
+  color: @bmes_secondary;
+}
+
 @media (max-width: 700px) {
   .bmes__service__content {
     flex-direction: column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .bmes__service__text_details {
     width: 100%;
@@ -70,11 +81,12 @@
     justify-content: flex-start;
     gap: 1rem;
 
-    p,
+    p {
+      font-size: 13px;
+    }
     h1 {
       width: 100%;
-      font-size: 11px;
-      line-height: 177%;
+      font-size: 20px;
     }
   }
   .bmess__service__media {
@@ -92,7 +104,7 @@
   }
   .bmes__service__banner {
     width: 95%;
-    height: 8vh;
+    height: 5vh;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 }

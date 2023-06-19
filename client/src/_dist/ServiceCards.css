@@ -383,6 +383,83 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/bungeeoutline/v18/_6_mEDvmVP24UvU2MyiGDslL3Qg3.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Bungee Outline';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bungeeoutline/v18/_6_mEDvmVP24UvU2MyiGDslL3Qg3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u-w4BMUTPHjxsIPy-v.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u_w4BMUTPHjxsI9w2PHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u8w4BMUTPHjxswWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u_w4BMUTPHjxsI5wqPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u_w4BMUTPHjxsI3wiPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u8w4BMUTPHh30wWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh7USew8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVew8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh50Xew8.ttf) format('truetype');
+}
 /* Colors */
 /* Font family */
 /* Shadow */
@@ -403,13 +480,15 @@
   align-items: flex-start;
   gap: 1.5rem;
   position: relative;
-  margin-top: 6rem;
+  margin-top: 9rem;
 }
 .bmes__services_section .service_title {
   font-family: "Montserrat", sans-serif;
-  width: 20%;
+  width: 100%;
   position: absolute;
   top: -20%;
+  font-weight: 300;
+  font-size: 42px;
 }
 .bmes__service__cards {
   display: flex;
@@ -431,6 +510,7 @@
 .bmes__card__text p {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
+  text-align: justify;
 }
 .bmes__service__card_text {
   display: flex;
@@ -472,6 +552,18 @@
   justify-content: center;
   gap: 1rem;
 }
+.bmes__pourquoi {
+  width: 88%;
+  margin-top: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 42px;
+  color: #26396c;
+  padding-left: 1%;
+}
+.bmes__service__card_readmore {
+  width: 60%;
+}
 @media (max-width: 1100px) {
   .bmes__services_section {
     filter: drop-shadow(0px 7px 3px rgba(0, 0, 0, 0.25)) drop-shadow(0px 3px 7px rgba(0, 0, 0, 0.25));
@@ -503,5 +595,13 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+  }
+  .bmes__pourquoi {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 0 8% 2%;
+    font-weight: 300;
+    font-size: 35px;
+    color: #26396c;
   }
 }

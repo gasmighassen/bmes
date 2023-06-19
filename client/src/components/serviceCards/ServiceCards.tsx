@@ -33,7 +33,7 @@ const ServiceCards = (props: Props) => {
         </ServiceCard>
         <ServiceCard>
           <div className="bmes__service__card_text">
-            <h1>Études et Conceptions</h1>
+            <h1>Solutions Techniques</h1>
             <img
               className="bmes__card__icon"
               src="/images/target-02.png"
@@ -42,10 +42,9 @@ const ServiceCards = (props: Props) => {
           </div>
           <div className="bmes__card__text">
             <p>
-              "BMES conçoit et analyse les projets de construction, réalisant
-              des plans et des détails structuraux, alliant créativité visuelle
-              et solidité pour des résultats remarquables, en collaboration avec
-              les architectes."
+              BMES propose des solutions techniques adaptées aux problèmes
+              rencontrés sur les matériaux ou les structures, basées sur un
+              diagnostic complet des désordres."
             </p>
           </div>
 
@@ -57,15 +56,15 @@ const ServiceCards = (props: Props) => {
         </ServiceCard>
         <ServiceCard>
           <div className="bmes__service__card_text">
-            <h1>Études et Conceptions</h1>
+            <h1>Contrôle et suivi du chantier</h1>
             <img className="bmes__card__icon" src="/images/gear.png" alt="" />
           </div>
           <div className="bmes__card__text">
             <p>
-              "BMES conçoit et analyse les projets de construction, réalisant
-              des plans et des détails structuraux, alliant créativité visuelle
-              et solidité pour des résultats remarquables, en collaboration avec
-              les architectes."
+              BMES assure la coordination et la supervision des chantiers. Des
+              mesures sont mises en place, telles que le contrôle de la qualité
+              des travaux et la correction des problèmes, pour satisfaire nos
+              clients.
             </p>
           </div>
 
@@ -77,7 +76,7 @@ const ServiceCards = (props: Props) => {
         </ServiceCard>
         <ServiceCard>
           <div className="bmes__service__card_text">
-            <h1>Études et Conceptions</h1>
+            <h1> Exécution</h1>
             <img
               className="bmes__card__icon"
               src="/images/vector-3.png"
@@ -86,10 +85,10 @@ const ServiceCards = (props: Props) => {
           </div>
           <div className="bmes__card__text">
             <p>
-              "BMES conçoit et analyse les projets de construction, réalisant
-              des plans et des détails structuraux, alliant créativité visuelle
-              et solidité pour des résultats remarquables, en collaboration avec
-              les architectes."
+              BMES fait appel à des entreprises qualifiées et sélectionnées sur
+              des critères rigoureux dans chaque corps de métier. Nos
+              constructions sont avant tout le résultat d’une collaboration
+              parfaite entre nos équipes internes et les artisans.
             </p>
           </div>
 
@@ -101,7 +100,7 @@ const ServiceCards = (props: Props) => {
         </ServiceCard>
         <ServiceCard>
           <div className="bmes__service__card_text">
-            <h1>Études et Conceptions</h1>
+            <h1>Autres Service</h1>
             <img
               className="bmes__card__icon"
               src="/images/vector-2.png"
