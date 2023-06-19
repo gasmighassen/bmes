@@ -50,7 +50,8 @@ const ContactUs = (props: Props) => {
           </div>
           <div className="bmes__contact_content">
             <form className="bmes__contact__form" ref={form}>
-              <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+              <h1>
+Êtes-vous convaincu que nous sommes les meilleurs ? Contactez-Nous !</h1>
               <BmesInput placeholder="Nom & Prenom" name="user_name" />
               <BmesInput placeholder="Votre email" name="user_email" />
               <BmesTextArea placeholder="Votre message" name="message" />

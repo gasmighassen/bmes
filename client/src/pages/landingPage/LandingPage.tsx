@@ -54,6 +54,7 @@ const LandingPage = (props: Props) => {
           </p>
         </div>
       </div>
+      <h1 className="bmes__pourquoi">Pourquoi BMES ?</h1>
       <div className="bmes__landing__cards">
         <CardBmes className="animate__animated animate__delay-1s animate__bounceIn">
           <img src="/images/1.jpg" alt="" />
@@ -78,7 +79,7 @@ const LandingPage = (props: Props) => {
       </div>
 
       <ServiceCards />
-      <LandingPortfolio />
+      {/*      <LandingPortfolio /> */}
       <BmesMap />
       <Footer />
     </div>

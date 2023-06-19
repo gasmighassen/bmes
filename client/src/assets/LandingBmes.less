@@ -30,21 +30,23 @@
 .bmes__who_are_we {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   background-color: #0d0e52de;
   color: #ffffff;
-  padding: 2%;
+  padding: 0 7%;
   gap: 2%;
   span {
     color: @bmes_tertiary;
   }
   h1 {
     color: @bmes_white;
-    font-family: @bmes_poppins;
-    width: 80%;
-    font-size: 25px;
+    font-family: @bmes_montserrat;
+    width: 100%;
+    font-size: 42px;
+    font-weight: 300;
+    padding-top: 2%;
   }
 }
 .bmes__who__are_we_text {
@@ -54,7 +56,7 @@
   font-weight: 300;
   line-height: 2rem;
   font-size: 1rem;
-  padding: 5% 0;
+  padding: 3% 0;
 }
 .bmes__landing__cards {
   width: 80%;
@@ -63,7 +65,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 5% 0;
+  padding: 2% 0;
 }
 @media (max-width: 700px) {
   .bmes__who__are_we_text {
@@ -76,9 +78,12 @@
   .bmes__who_are_we {
     padding: 4% 0;
     h1 {
-      font-size: 1.1rem;
+      color: @bmes_white;
+      font-family: @bmes_montserrat;
       width: 100%;
-      padding: 5%;
+      font-size: 35px;
+      font-weight: 300;
+      padding-top: 2%;
     }
   }
 }

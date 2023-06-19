@@ -55,7 +55,7 @@ const ServiceSidebar = (props: Props) => {
               to="/services"
               className={({ isActive }) => (isActive ? "active_service" : "")}
             >
-              Réalisation
+              Exécution
             </NavLink>
           </li>
           <li className="bmes__sidebar_item">
@@ -64,7 +64,7 @@ const ServiceSidebar = (props: Props) => {
               to="/services"
               className={({ isActive }) => (isActive ? "active_service" : "")}
             >
-              Autre
+              Autres
             </NavLink>
           </li>
         </ul>

@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "../../_dist/NavBarBmes.css";
 import { NavLink } from "react-router-dom";
 
@@ -16,6 +16,14 @@ const NavbarBmes = (props: Props) => {
           to={"/"}
         >
           Acceuil
+        </NavLink>{" "}
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "active__nav__item" : "nav__item"
+          }
+          to={"/about"}
+        >
+          A Propos
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -31,7 +39,7 @@ const NavbarBmes = (props: Props) => {
           }
           to={"/about"}
         >
-          A Propos
+          Portfolio
         </NavLink>
         <NavLink
           className={({ isActive }) =>
