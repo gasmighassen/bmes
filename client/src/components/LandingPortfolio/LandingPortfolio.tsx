@@ -34,10 +34,10 @@ const LandingPortfolio = (props: Props) => {
         <img src={slideImage.url} alt="" />
       </div>
       <div className="bmes__portfolio_container">
-        <Splide ref={splideRef} >
+        <Splide ref={splideRef}>
           {images.map((image, index) => (
             <SplideSlide
-              className={`bmes__slide ${index === activeIndex ? "active_slide" : ""}`}
+              className={`${index === activeIndex ? "active_thumb" : ""}`}
               key={index}
             >
               <img
