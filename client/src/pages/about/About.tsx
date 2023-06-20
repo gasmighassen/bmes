@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import LandingPortfolio from "../../components/LandingPortfolio/LandingPortfolio";
 
-type Props = {}
+type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div>About</div>
-  )
-}
+    <div>
+      <LandingPortfolio />
+    </div>
+  );
+};
 
-export default About
+export default About;

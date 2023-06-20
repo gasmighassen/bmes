@@ -79,7 +79,7 @@ const LandingPage = (props: Props) => {
       </div>
 
       <ServiceCards />
-      {/*      <LandingPortfolio /> */}
+      <LandingPortfolio />
       <BmesMap />
       <Footer />
     </div>
