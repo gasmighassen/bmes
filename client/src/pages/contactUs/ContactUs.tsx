@@ -40,7 +40,7 @@ const ContactUs = (props: Props) => {
     <div className="bmes__contact-us">
       <div className="bmes__form__container">
         <div className="contact__us__image">
-          <img src="/images/contact_us-2.jpg" alt="" />
+          <img src="/images/contact_us-2.jpg" alt="" loading="lazy" />
         </div>
         <div className="form__container">
           {" "}
@@ -51,14 +51,16 @@ const ContactUs = (props: Props) => {
           <div className="bmes__contact_content">
             <form className="bmes__contact__form" ref={form}>
               <h1>
-Êtes-vous convaincu que nous sommes les meilleurs ? Contactez-Nous !</h1>
+                Êtes-vous convaincu que nous sommes les meilleurs ?
+                Contactez-Nous !
+              </h1>
               <BmesInput placeholder="Nom & Prenom" name="user_name" />
               <BmesInput placeholder="Votre email" name="user_email" />
               <BmesTextArea placeholder="Votre message" name="message" />
               <ButtonBmes onClick={sendEmail}>Envoyer</ButtonBmes>
             </form>{" "}
             <div className="bmes__contact__image">
-              <img src="/images/contact_left.jpg" alt="" />
+              <img src="/images/contact_left.jpg" alt="" loading="lazy" />
             </div>
           </div>
         </div>

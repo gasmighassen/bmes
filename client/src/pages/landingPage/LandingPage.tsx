@@ -6,24 +6,53 @@ import ServiceCards from "../../components/serviceCards/ServiceCards";
 import LandingPortfolio from "../../components/LandingPortfolio/LandingPortfolio";
 import BmesMap from "../../components/map/BmesMap";
 import Footer from "../../components/footer/Footer";
+import ButtonBmes from "../../components/button/ButtonBmes";
 type Props = {};
 
 const LandingPage = (props: Props) => {
   return (
     <div className="bmes-landing">
       <div className="bmes__upper__caroussel">
-        <CarousselBmes autoplay interval={7000}>
+        <CarousselBmes autoplay interval={10000}>
           <div className="bmes__landing__caroussel__item">
             <img src="/images/1.jpg" alt="" />
+            <div className="overLay__bmes">
+              <h1>Obtenez une estimation gratuite !</h1>
+              <h2>
+                Vous avez un projet de construction ou de rénovation ? Pour
+                connaître le coût de votre projet, cliquez sur le bouton
+                ci-dessous. Nos experts en services et études de construction et
+                bâtiments sont prêts à vous aider.
+              </h2>
+              <ButtonBmes variant="tertiary">Demande Devises</ButtonBmes>
+            </div>
           </div>
           <div className="bmes__landing__caroussel__item">
             <img src="/images/2.jpg" alt="" />
+            <div className="overLay__bmes">
+              <h1>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus,
+                beatae.
+              </h1>
+            </div>
           </div>
           <div className="bmes__landing__caroussel__item">
             <img src="/images/3.jpg" alt="" />
+            <div className="overLay__bmes">
+              <h1>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus,
+                beatae.
+              </h1>
+            </div>
           </div>
           <div className="bmes__landing__caroussel__item">
             <img src="/images/4.jpg" alt="" />
+            <div className="overLay__bmes">
+              <h1>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus,
+                beatae.
+              </h1>
+            </div>
           </div>
         </CarousselBmes>
       </div>
