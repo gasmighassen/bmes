@@ -514,7 +514,7 @@
   list-style-type: none !important;
   margin: 0;
   position: relative;
-  padding: 1%;
+  padding: 3px;
   border-radius: 11px;
   height: 100% !important;
   width: 20% !important;
@@ -572,6 +572,7 @@
   cursor: pointer;
   filter: brightness(0.7);
   transition: all 0.2s ease;
+  background-color: #00000045;
 }
 .portfolio__main_image:hover {
   filter: brightness(1);
@@ -579,11 +580,11 @@
 .portfolio__main_image img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 13px;
 }
 .active_thumb {
-  border: 3px white solid;
+  border: 1px white solid;
   border-radius: 11px;
   filter: brightness(1);
 }
@@ -623,12 +624,14 @@
     justify-content: center;
     border-radius: 13px;
     cursor: pointer;
+    background-color: #00000045;
   }
   .portfolio__main_image img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 13px;
+    filter: drop-shadow(-2px 3px 3px px black);
   }
   .bmes__portfolio_container {
     width: 100%;
@@ -669,7 +672,7 @@
     padding: 2% 0 !important;
   }
   .splide__arrow {
-    width: 1em ;
+    width: 1em;
     align-items: center;
     background: #ffffff !important;
     border: 0;

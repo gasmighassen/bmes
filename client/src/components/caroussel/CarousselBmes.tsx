@@ -44,10 +44,7 @@ const CarousselBmes: React.FC<CarousselProps> = ({
     };
   }, [autoplay, currentSlide, childrenCount, interval]);
   const renderDotsStartIndex = Math.max(0, currentSlide - 1);
-  const renderDotsEndIndex = Math.min(
-    childrenCount - 1,
-    renderDotsStartIndex + 2
-  );
+  const renderDotsEndIndex = Math.min(childrenCount, renderDotsStartIndex + 2);
   return (
     <div className="carousel-container">
       <div className="slides-container">

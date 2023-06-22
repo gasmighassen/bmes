@@ -8,6 +8,9 @@ const NavbarBmes = (props: Props) => {
   const [open, setOpen] = useState(false);
   return (
     <div className="bmes__navbar">
+      <div className="bmes__logo">
+        <img src="/images/logo-bmes-01.svg" alt="" />
+      </div>
       <div className={`nav__items ${open && "open"}`}>
         <NavLink
           className={({ isActive }) =>
@@ -37,27 +40,36 @@ const NavbarBmes = (props: Props) => {
           className={({ isActive }) =>
             isActive ? "active__nav__item" : "nav__item"
           }
-          to={"/about"}
+          to={"/portfolio"}
         >
           Portfolio
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "active__nav__item" : "nav__item"
+            isActive ? "active__nav__item devis" : "nav__item devis"
           }
-          to={"/contact"}
+          to={"/devise"}
         >
-          Contactez-nous
-        </NavLink>
+          Demande DEVISES
+        </NavLink>{" "}
+        <div className="bmes__nav_contact">
+          {" "}
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active__nav__item" : "nav__item"
+            }
+            to={"/contact"}
+          >
+            Contactez-nous ?
+          </NavLink>
+        </div>
       </div>
+
       <div
         className={`nav-toggle ${open && "open"}`}
         onClick={() => setOpen(!open)}
       >
         <div className="bar"></div>
-      </div>
-      <div className="bmes__logo">
-        <img src="/images/logo-bmes-01.svg" alt="" />
       </div>
     </div>
   );

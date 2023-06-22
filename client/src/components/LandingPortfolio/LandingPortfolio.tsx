@@ -31,7 +31,7 @@ const LandingPortfolio = (props: Props) => {
     <div className="bmes__landing__portfolio__section">
       <h1 className="bmes__pourquoi">Nos Projets</h1>
       <div className="portfolio__main_image">
-        <img src={slideImage.url} alt="" />
+        <img src={slideImage.url} alt="" loading="lazy" />
       </div>
       <div className="bmes__portfolio_container">
         <Splide ref={splideRef}>
@@ -43,6 +43,7 @@ const LandingPortfolio = (props: Props) => {
               <img
                 src={image.url}
                 alt={`Image ${index}`}
+                loading="lazy"
                 onClick={() => splideRef.current.splide.go(index)}
               />
             </SplideSlide>
