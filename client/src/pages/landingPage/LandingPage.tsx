@@ -7,9 +7,11 @@ import LandingPortfolio from "../../components/LandingPortfolio/LandingPortfolio
 import BmesMap from "../../components/map/BmesMap";
 import Footer from "../../components/footer/Footer";
 import ButtonBmes from "../../components/button/ButtonBmes";
+import { useNavigate } from "react-router-dom";
 type Props = {};
 
 const LandingPage = (props: Props) => {
+  const navigate = useNavigate();
   return (
     <div className="bmes-landing">
       <div className="bmes__upper__caroussel">
@@ -24,7 +26,9 @@ const LandingPage = (props: Props) => {
                 ci-dessous. Nos experts en services et études de construction et
                 bâtiments sont prêts à vous aider.
               </h2>
-              <ButtonBmes variant="tertiary">Demande Devises</ButtonBmes>
+              <ButtonBmes variant="tertiary" onClick={() => navigate("/devis")}>
+                Demande Devis
+              </ButtonBmes>
             </div>
           </div>
           <div className="bmes__landing__caroussel__item">
