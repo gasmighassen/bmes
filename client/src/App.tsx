@@ -6,6 +6,11 @@ import Service from "./pages/service/Service";
 import About from "./pages/about/About";
 import ContactUs from "./pages/contactUs/ContactUs";
 import ServiceLayout from "./components/layout/ServiceLayout";
+import Portfolio from "./pages/portfolio/Portfolio";
+import Devis from "./pages/devis/Devis";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import BmesAccess from "./pages/IAM/BmesAccess";
 
 function App() {
   return (
@@ -16,7 +21,9 @@ function App() {
           <Route path="services" element={<ServiceLayout />}>
             <Route index element={<Service />} />
           </Route>
-
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="devis" element={<Devis />} />
+          <Route path="login" element={<BmesAccess />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<ContactUs />} />
         </Route>

@@ -1,0 +1,98 @@
+@import "./preset.less";
+
+.bmes__login__section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../public/images/caroussel-image-6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.register_Wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+  width: 50%;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(255, 255, 255, 0.753);
+  border-radius: 7px;
+  h1 {
+    font-weight: 300;
+    color: @bmes_primary;
+  }
+}
+.action__iam {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register_Form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.forgot__psw {
+  text-align: center;
+}
+.formInputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  row-gap: 20px;
+}
+
+.formTextItem {
+  border: 1px @bmes_primary solid;
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+}
+.loginBtn {
+  width: 100%;
+  background-color: @bmes_primary;
+  text-decoration: none;
+  border: none;
+  padding: 15px 15px;
+  border-radius: 5px;
+  color: aliceblue;
+}
+.bmes__switch__iam {
+  color: @bmes_primary;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .register_Wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    padding: 2%;
+  }
+  .register_Form {
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .register_Wrap h1 {
+    font-weight: 300;
+    color: #26396c;
+    text-align: center;
+  }
+}
