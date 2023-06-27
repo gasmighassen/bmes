@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigService } from './shared/config.service';
 import { SharedModule } from './shared.module';
+import { User } from './user/model/user.model';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -12,7 +14,9 @@ import { SharedModule } from './shared.module';
       useFactory: (config: ConfigService) => config.typeOrmConfig,
       inject: [ConfigService],
     }),
+    UserModule,
   ],
+
   providers: [AppService],
 })
 export class AppModule {}
