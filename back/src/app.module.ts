@@ -6,6 +6,7 @@ import { ConfigService } from './shared/config.service';
 import { SharedModule } from './shared.module';
 import { User } from './user/model/user.model';
 import { UserModule } from './user/user.module';
+import { AuthModule } from './authentification/user.auth.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { UserModule } from './user/user.module';
       inject: [ConfigService],
     }),
     UserModule,
+    AuthModule,
   ],
 
   providers: [AppService],
