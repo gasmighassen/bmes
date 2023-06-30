@@ -15,7 +15,7 @@ export class UserAuth {
   ) {}
 
   async validateUser(email: string, password: string) {
-    const user = await this.userService.login(email);
+    const user = await this.userService.login(email, password);
     // comparaison password
     if (await bcrypt.compare(password, user.password)) {
       //delete password for security reason
@@ -27,7 +27,7 @@ export class UserAuth {
   }
   async login(email: string, password: string) {
     const userData = await this.validateUser(email, password);
-    if (userData == null) {
+    if (userData === null) {
       throw new BadRequestException('invalid credentials');
     }
     const payload: JwtPayload = {
@@ -42,6 +42,7 @@ export class UserAuth {
       access_token: await this.jwtService.signAsync(payload, {
         secret: process.env.JWT_SECRET,
       }),
+      payload,
     };
     console.log(result.access_token);
     return result;

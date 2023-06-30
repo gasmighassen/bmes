@@ -15,6 +15,7 @@ import { AuthModule } from './authentification/user.auth.module';
       useFactory: (config: ConfigService) => config.typeOrmConfig,
       inject: [ConfigService],
     }),
+
     UserModule,
     AuthModule,
   ],

@@ -12,9 +12,6 @@ export class UserService {
     private userRepository: Repository<User>,
   ) {}
 
-  async create(createuserdto: CreateUserDto) {
-    return this.userRepository.save(createuserdto);
-  }
 
   async findUser(id: number) {
     return await this.userRepository.findOne({
@@ -42,7 +39,7 @@ export class UserService {
     } else throw new BadRequestException('email exist');
   }
 
-  async login(email: string) {
+  async login(email: string,password:string) {
     const loginUser = await this.userRepository.findOneBy({ email });
     if (!loginUser) {
       throw new BadRequestException('invalid email or password');
