@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import ButtonBmes from "../../components/button/ButtonBmes";
 import "../../_dist/Login.css";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { bindActionCreators } from "redux";
+import { userActionCreator } from "../../redux";
+
 type Props = {
   toRegister: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const Login = ({ toRegister }: Props) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { loginUser } = bindActionCreators(userActionCreator, dispatch);
   const [login, setlogin] = useState({
     email: "",
     password: "",
@@ -33,10 +40,12 @@ const Login = ({ toRegister }: Props) => {
           />
           <p className="forgot__psw">Mot de passe oublié ?</p>
         </div>
-        <ButtonBmes>Connecté</ButtonBmes>
+        <ButtonBmes onClick={() => loginUser(login)}>Connecté</ButtonBmes>
         <p className="forgot__psw">
           Vous n'avez pas de compte?{" "}
-          <span className="bmes__switch__iam" onClick={() => toRegister(false)}>Créer un compte</span>
+          <span className="bmes__switch__iam" onClick={() => toRegister(false)}>
+            Créer un compte
+          </span>
         </p>
       </div>
     </div>
