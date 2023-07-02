@@ -15,26 +15,44 @@ import {
   LOGIN_USER_REQUEST,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_FAIL,
+  LOGOUT_USER,
+  GET_CURRENT_REQUEST,
+  GET_CURRENT_SUCCESS,
+  GET_CURRENT_FAIL,
 } from "../actionTypes/userActionTypes";
 import { User } from "../types/types";
 
 export interface UserState {
   userListe: User[];
-  currentUser: User[];
+  currentUser: User;
+  isAuth: boolean;
   errors: string;
   status: string;
 }
+interface UserActions {
+  type: string;
+  payload: any; // Update the type based on your payload data type
+}
 const initialState: UserState = {
   userListe: [],
-  currentUser: [],
+  currentUser: {
+    username: "",
+    id: null,
+    email: "",
+    password: "",
+    phone: "",
+    city: "",
+    role: null,
+  },
+  isAuth: false,
   errors: "",
   status: "",
 };
 export const userReducer = (
   state = initialState,
-  action: UserAction
+  { type, payload }: UserActions
 ): UserState => {
-  switch (action.type) {
+  switch (type) {
     case ADD_USER_REQUEST:
       return {
         ...state,
@@ -42,12 +60,12 @@ export const userReducer = (
     case ADD_USER_SUCCESS:
       return {
         ...state,
-        userListe: [...state.userListe, action.payload],
+        userListe: [...state.userListe, payload],
       };
     case ADD_USER_FAIL:
       return {
         ...state,
-        errors: action.payload,
+        errors: payload,
       };
     case GET_USER_REQUEST:
       return {
@@ -56,12 +74,28 @@ export const userReducer = (
     case GET_USER_SUCCESS:
       return {
         ...state,
-        userListe: action.payload,
+        userListe: payload,
       };
     case GET_USER_FAIL:
       return {
         ...state,
-        errors: action.payload,
+        errors: payload,
+      };
+    case GET_CURRENT_REQUEST:
+      return {
+        ...state,
+      };
+    case GET_CURRENT_SUCCESS:
+      return {
+        ...state,
+        currentUser: payload,
+        status: "success",
+        isAuth: true,
+      };
+    case GET_CURRENT_FAIL:
+      return {
+        ...state,
+        errors: payload,
       };
     case LOGIN_USER_REQUEST:
       return {
@@ -70,12 +104,18 @@ export const userReducer = (
     case LOGIN_USER_SUCCESS:
       return {
         ...state,
-        currentUser: [...state.currentUser, { ...action.payload }],
+
+        isAuth: true,
       };
     case LOGIN_USER_FAIL:
       return {
         ...state,
-        errors: action.payload,
+        errors: payload,
+      };
+    case LOGOUT_USER:
+      return {
+        ...state,
+        isAuth: false,
       };
     default:
       return state;

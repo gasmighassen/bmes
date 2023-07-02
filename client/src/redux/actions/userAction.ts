@@ -17,34 +17,24 @@ import {
   LOGIN_USER_REQUEST,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_FAIL,
+  GET_CURRENT_REQUEST,
+  GET_CURRENT_SUCCESS,
+  GET_CURRENT_FAIL,
 } from "../actionTypes/userActionTypes";
 import { User } from "../types/types";
 import jwt_decode from "jwt-decode";
 
 export const loginUser = (login) => async (dispatch: Dispatch<UserAction>) => {
   dispatch({ type: LOGIN_USER_REQUEST, payload: "sent" });
-  console.log(login);
+
   try {
     let result = await axios.post("/users/login", login);
     dispatch({ type: LOGIN_USER_SUCCESS, payload: result.data.payload });
-    console.log(result.data);
+
     localStorage.setItem("token", result.data.access_token);
-
-    /*    // Decode the access token
-    const decoded: { role: string } = jwt_decode(result.data.access_token);
-
-    // Check the user's role before redirecting
-    if (decoded.role === "admin") {
-      window.location.href = "/admin/dashboard";
-    } else if (decoded.role === "user") {
-      window.location.href = "/";
-    } else {
-      // Handle other roles or redirect to a default page
-      window.location.href = "/";
-    } */
   } catch (error) {
     dispatch({ type: LOGIN_USER_FAIL, payload: error });
-    console.log(error);
+
   }
 };
 
@@ -64,6 +54,21 @@ export const getUsers = () => async (dispatch: Dispatch<UserAction>) => {
         payload: error.response?.data.message || error.message,
       });
     }
+  }
+};
+export const userCurrent = () => async (dispatch: Dispatch<UserAction>) => {
+  dispatch({ type: GET_CURRENT_REQUEST });
+  const accessToken = localStorage.getItem("token");
+  try {
+    let result = await axios.get("/users/current", {
+      headers: {
+        Authorization: accessToken ? `Bearer ${accessToken}` : "",
+      },
+    });
+
+    dispatch({ type: GET_CURRENT_SUCCESS, payload: result.data });
+  } catch (error) {
+    dispatch({ type: GET_CURRENT_FAIL, payload: error });
   }
 };
 
@@ -117,6 +122,6 @@ export const deleteUser =
 export const logout = () => {
   return (dispatch) => {
     localStorage.removeItem("token");
-    dispatch({ type: "LOGOUT" });
+    dispatch({ type: "LOGOUT_USER" });
   };
 };

@@ -15,9 +15,9 @@ export class UserAuth {
   ) {}
 
   async validateUser(email: string, password: string) {
-    const user = await this.userService.login(email, password);
+    const user = await this.userService.findOneWithEmail(email);
     // comparaison password
-    if (await bcrypt.compare(password, user.password)) {
+    if ((await bcrypt.compare(password, user.password)) && user) {
       //delete password for security reason
       delete user.password;
       // return user login
@@ -44,7 +44,7 @@ export class UserAuth {
       }),
       payload,
     };
-    console.log(result.access_token);
+  
     return result;
   }
 }

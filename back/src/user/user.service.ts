@@ -5,6 +5,7 @@ import { User } from './model/user.model';
 import { CreateUserDto } from './dto/user.create.dto';
 import * as bcrypt from 'bcrypt';
 import { Request } from 'express';
+import { UseLoginDto } from './dto/user.login.dto';
 @Injectable()
 export class UserService {
   constructor(
@@ -12,11 +13,19 @@ export class UserService {
     private userRepository: Repository<User>,
   ) {}
 
-
   async findUser(id: number) {
-    return await this.userRepository.findOne({
-      where: { id: id },
+    const user = await this.userRepository.findOne({
+      where: { id },
     });
+
+    if (user) {
+      delete user.password; // Exclude 'password' from the user object
+    }
+
+    return user;
+  }
+  async findOneWithEmail(email: string) {
+    return await this.userRepository.findOne({ where: { email: email } });
   }
 
   async findAll() {
@@ -39,11 +48,23 @@ export class UserService {
     } else throw new BadRequestException('email exist');
   }
 
-  async login(email: string,password:string) {
+  async login(email: string, password: string) {
     const loginUser = await this.userRepository.findOneBy({ email });
     if (!loginUser) {
       throw new BadRequestException('invalid email or password');
     }
     return loginUser;
+  }
+  async findAndUpdateUser(email: string, updateUserDto: UseLoginDto) {
+    const user = await this.userRepository.findOneBy({ email });
+
+    if (!user) {
+      throw new BadRequestException('User not found');
+    }
+
+    user.username = updateUserDto.email;
+    user.password = updateUserDto.password;
+
+    return this.userRepository.save(user);
   }
 }

@@ -1,15 +1,21 @@
+import { useEffect } from "react";
 import "../../_dist/Services.css";
 import ServiceSection from "./ServiceSection";
+import Cookies from "js-cookie";
 
 type Props = {};
 
 const Service = (props: Props) => {
+  useEffect(() => {
+    // Set the same-site cookie when the component mounts
+    Cookies.set("myCookie", "cookieValue", { sameSite: "lax" });
+  }, []);
   return (
     <div className="bmes__services">
       <ServiceSection
         id="service1"
         banner="/images/caroussel-image-1.jpg"
-        media="https://www.youtube.com/embed/db6rapiuOhs"
+        media="db6rapiuOhs"
       >
         <h1 className="service__title">Études et Conceptions</h1>
         <p className="service_paragraphe">
@@ -34,7 +40,7 @@ const Service = (props: Props) => {
       <ServiceSection
         id="service2"
         banner="/images/armatures_pour_beton.jpg"
-        media="https://www.youtube.com/embed/DBnX3bGnlXc"
+        media="DBnX3bGnlXc"
       >
         <h1 className="service__title">Solutions Techniques </h1>
         <p className="service_paragraphe">
@@ -59,7 +65,7 @@ const Service = (props: Props) => {
       <ServiceSection
         id="service3"
         banner="/images/equipement-essentiel-chantier-construction-obzadfnbtyjyyhfs7nfdsyxkq3avt29m9hr1zaa3lk.jpg"
-        media="https://www.youtube.com/embed/pLE-KYEKGEQ"
+        media="pLE-KYEKGEQ"
       >
         {" "}
         <h1 className="service__title">
@@ -86,7 +92,7 @@ const Service = (props: Props) => {
       <ServiceSection
         id="service4"
         banner="/images/banner.jpg"
-        media="https://www.youtube.com/embed/pLE-KYEKGEQ"
+        media="pLE-KYEKGEQ"
       >
         {" "}
         <h1 className="service__title">Exécution </h1>
@@ -108,7 +114,7 @@ const Service = (props: Props) => {
       <ServiceSection
         id="service5"
         banner="/images/controle.jpg"
-        media="https://www.youtube.com/embed/pLE-KYEKGEQ"
+        media="pLE-KYEKGEQ"
       >
         {" "}
         <h1 className="service__title">Autres Services</h1>

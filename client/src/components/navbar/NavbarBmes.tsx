@@ -1,29 +1,34 @@
 import { useEffect, useState } from "react";
 import "../../_dist/NavBarBmes.css";
 import { NavLink, useNavigate } from "react-router-dom";
-import { LoginOutlined, SolutionOutlined } from "@ant-design/icons";
+import {
+  LoginOutlined,
+  SolutionOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 import { bindActionCreators } from "redux";
 import { userActionCreator } from "../../redux";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 type Props = {};
 
 const NavbarBmes = (props: Props) => {
-  const dispatch = useDispatch<any>();
+  const dispatch = useDispatch();
+
+  const { userCurrent } = bindActionCreators(userActionCreator, dispatch);
+  const isAuth = useSelector((state: any) => state.user.isAuth);
   const { logout } = bindActionCreators(userActionCreator, dispatch);
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
-  const [connected, setConnected] = useState(false);
-  const isAuth = localStorage.getItem("token");
+  const [connected, setConnected] = useState(isAuth);
 
   useEffect(() => {
-    if (isAuth) {
-      setConnected(true);
-    } else {
-      setConnected(false);
-    }
-    console.log(connected);
-    return () => {};
+    userCurrent();
+
+    return () => {
+      setConnected(isAuth);
+    };
   }, [isAuth]);
 
   return (
@@ -76,14 +81,37 @@ const NavbarBmes = (props: Props) => {
         >
           <SolutionOutlined className="button_icon" /> Demande DEVIS
         </NavLink>{" "}
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "active__nav__item connect" : "nav__item connect"
-          }
-          to={"/login"}
-        >
-          <LoginOutlined className="button_icon" /> Connecté
-        </NavLink>
+        {isAuth ? (
+          <>
+            {" "}
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "active__nav__item connect" : "nav__item connect"
+              }
+              to={"/profile"}
+            >
+              <UserOutlined className="button_icon" /> Profile
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "active__nav__item connect" : "nav__item connect"
+              }
+              to={"/"}
+              onClick={logout}
+            >
+              <LoginOutlined className="button_icon" /> Déconnecté
+            </NavLink>{" "}
+          </>
+        ) : (
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active__nav__item connect" : "nav__item connect"
+            }
+            to={"/login"}
+          >
+            <LoginOutlined className="button_icon" /> Connecté
+          </NavLink>
+        )}
         <div className="bmes__nav_contact">
           {" "}
           <NavLink
