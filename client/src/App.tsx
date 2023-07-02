@@ -11,6 +11,9 @@ import Devis from "./pages/devis/Devis";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import BmesAccess from "./pages/IAM/BmesAccess";
+import UserPrivateRoute from "./private/UserPrivateRoute";
+import Profile from "./pages/profile/Profile";
+import AuthRoute from "./private/AuthRoute";
 
 function App() {
   return (
@@ -23,9 +26,15 @@ function App() {
           </Route>
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="devis" element={<Devis />} />
-          <Route path="login" element={<BmesAccess />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<ContactUs />} />
+          <Route element={<AuthRoute />}>
+            <Route path="login"  element={<Login   />} />{" "}
+          </Route>
+          <Route path="register" element={<Register />} />{" "}
+          <Route element={<UserPrivateRoute />}>
+            <Route path="profile" element={<Profile />} />{" "}
+          </Route>
         </Route>
       </Routes>
     </>

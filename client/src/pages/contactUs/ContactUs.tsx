@@ -17,7 +17,7 @@ const ContactUs = (props: Props) => {
 
   const sendEmail = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    console.log("send");
+   
     if (form.current) {
       emailjs
         .sendForm(
@@ -28,10 +28,10 @@ const ContactUs = (props: Props) => {
         )
         .then(
           (result) => {
-            console.log(result.text);
+         
           },
           (error) => {
-            console.log(error.text);
+         
           }
         );
     }

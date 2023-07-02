@@ -6,4 +6,5 @@ export class UseLoginDto {
   readonly email: string;
   @IsNotEmpty()
   readonly password: string;
+  refreshToken?: string;
 }

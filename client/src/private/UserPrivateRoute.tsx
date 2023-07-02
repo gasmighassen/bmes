@@ -1,9 +1,12 @@
 import React from "react";
+import { Navigate, Outlet } from "react-router-dom";
 
 type Props = {};
 
 const UserPrivateRoute = (props: Props) => {
-  return <div>UserPrivateRoute</div>;
+  let auth = localStorage.getItem("token");
+
+  return auth ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default UserPrivateRoute;

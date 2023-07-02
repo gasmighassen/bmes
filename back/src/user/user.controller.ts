@@ -19,6 +19,10 @@ import { Role } from 'src/authentification/roles.enum';
 
 import { Reflector } from '@nestjs/core';
 
+import { LocalAuthGuard } from 'src/authentification/local-auth.guard';
+import { LocalStrategy } from 'src/authentification/local.strategy';
+import { GetUser } from './user.decorator';
+
 @Controller('users')
 export class UserController {
   constructor(
@@ -38,10 +42,14 @@ export class UserController {
   async findAll() {
     return this.userService.findAll();
   }
-  @Get(':id')
-  async findOneBy(@Param('id') id: number) {
-    return this.userService.findUser(id);
+  @UseGuards(JwtAuthGuard)
+  @Get('/current')
+  async currentUser(@GetUser() user: User) {
+    const currentUser = await this.userService.findUser(user.id);
+    return currentUser;
   }
+
+  @UseGuards(LocalStrategy)
   @Post('/login')
   async login(@Body() userlogindto: UseLoginDto) {
     return await this.authService.login(

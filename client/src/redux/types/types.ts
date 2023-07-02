@@ -12,7 +12,9 @@ export interface User {
 }
 
 export interface UserState {
-  users: User[];
-  loading: boolean;
-  error: string | null;
+  userListe: User[];
+  currentUser: User[];
+  isAuth: boolean;
+  errors: string;
+  status: string;
 }
