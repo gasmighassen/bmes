@@ -9,8 +9,11 @@ const CategoryCard = ({ media, service }: Props) => {
   return (
     <div className="bmes_category_card">
       <img src={media} alt="" />
-      <h3>{service}</h3>
-      <button>Plus</button>
+      <div className="bmes_category_details">
+        {" "}
+        <h3>{service}</h3>
+        <button className="btn-outline-white">Plus d'images</button>
+      </div>
     </div>
   );
 };
