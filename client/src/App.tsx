@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import "./_dist/App.css";
 import LandingPage from "./pages/landingPage/LandingPage";
 import Layout from "./components/layout/Layout";
@@ -14,6 +14,7 @@ import BmesAccess from "./pages/IAM/BmesAccess";
 import UserPrivateRoute from "./private/UserPrivateRoute";
 import Profile from "./pages/profile/Profile";
 import AuthRoute from "./private/AuthRoute";
+import PortfolioImgCard from "./pages/portfolio/PortfolioImgCard";
 
 function App() {
   return (
@@ -25,13 +26,16 @@ function App() {
             <Route index element={<Service />} />
           </Route>
           <Route path="portfolio" element={<Portfolio />} />
+          <Route path=":service" element={<PortfolioImgCard />} />
+
           <Route path="devis" element={<Devis />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<ContactUs />} />
           <Route element={<AuthRoute />}>
-            <Route path="login"  element={<Login   />} />{" "}
+            <Route path="login" element={<Login />} />{" "}
+            <Route path="register" element={<Register />} />{" "}
           </Route>
-          <Route path="register" element={<Register />} />{" "}
+
           <Route element={<UserPrivateRoute />}>
             <Route path="profile" element={<Profile />} />{" "}
           </Route>

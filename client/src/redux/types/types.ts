@@ -18,3 +18,8 @@ export interface UserState {
   errors: string;
   status: string;
 }
+export interface Image {
+  public_id: string;
+  folder: string;
+  secure_url: string;
+}

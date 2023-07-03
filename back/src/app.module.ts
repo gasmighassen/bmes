@@ -7,6 +7,7 @@ import { SharedModule } from './shared.module';
 import { User } from './user/model/user.model';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './authentification/user.auth.module';
+import { CloudinaryModule } from './cloudinary/cloudinary.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { AuthModule } from './authentification/user.auth.module';
 
     UserModule,
     AuthModule,
+    CloudinaryModule,
   ],
 
   providers: [AppService],
