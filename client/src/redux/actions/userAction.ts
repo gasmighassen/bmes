@@ -22,7 +22,7 @@ import {
   GET_CURRENT_FAIL,
 } from "../actionTypes/userActionTypes";
 import { User } from "../types/types";
-import jwt_decode from "jwt-decode";
+
 
 export const loginUser = (login) => async (dispatch: Dispatch<UserAction>) => {
   dispatch({ type: LOGIN_USER_REQUEST, payload: "sent" });
