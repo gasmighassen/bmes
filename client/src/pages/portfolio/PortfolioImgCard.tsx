@@ -8,16 +8,21 @@ import { useSelector } from "react-redux";
 import { ImagesState } from "../../redux/reducers/imagesReducer";
 import { Image } from "../../redux/types/types";
 import { CloseOutlined } from "@ant-design/icons";
-
+import Carousel from "react-material-ui-carousel";
+import { Paper, Button } from "@mui/material";
 type Props = {};
 
 const PortfolioImgCard = (props: Props) => {
   const [openModal, setOpenModal] = useState(false);
+  const [activeImage, setActiveImage] = useState<number>();
   const serviceParam = useParams();
   const dispatch = useDispatch();
   const { getImages } = bindActionCreators(imagesActionCreator, dispatch);
   const gallery = useSelector((state: any) => state.images.images);
-
+  const handleActiveImage = (element) => {
+    setActiveImage(element);
+    setOpenModal(true);
+  };
   useEffect(() => {
     getImages();
 
@@ -42,14 +47,14 @@ const PortfolioImgCard = (props: Props) => {
     <>
       {" "}
       <div className="bmes_service_portfolio">
-        {filteredImages.map((el: Image, index) => (
+        {filteredImages.map((el: Image, index: number) => (
           <div key={index} className="bmes_service_portfolio_images">
             {el.format === "jpg" ? (
               <img
                 src={el.secure_url}
                 alt=""
                 loading="lazy"
-                onClick={() => setOpenModal(true)}
+                onClick={() => handleActiveImage(index)}
               />
             ) : (
               <iframe
@@ -65,8 +70,20 @@ const PortfolioImgCard = (props: Props) => {
       {openModal && (
         <div className="bmes_portfolio_images_caroussel">
           <div className="close_caroussel_portfolio">
-            <CloseOutlined onClick={() => setOpenModal(false)} />
-            {/* <ImageGallery items={filteredImages} /> */}
+            <CloseOutlined  onClick={() => setOpenModal(false)} />
+            <Carousel
+              autoPlay={false}
+              animation={"fade"}
+              swipe={false}
+              navButtonsAlwaysVisible
+              index={activeImage}
+            >
+              {filteredImages.map((item: Image, i: number) => (
+                <div className="bmes_active_portfolio_image">
+                  <img key={i} src={item.secure_url} />
+                </div>
+              ))}
+            </Carousel>
           </div>
         </div>
       )}
