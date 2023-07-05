@@ -40,7 +40,7 @@
     "react-material-ui-carousel": "^3.4.2",
     "react-redux": "^8.1.1",
     "react-router-dom": "^6.11.2",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "react-youtube": "^10.1.0",
     "read-more-react": "^1.0.10",
     "redux": "^4.2.1",
@@ -76,7 +76,6 @@
   },
   "proxy": "http://localhost:4000",
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "webpack": "^4.44.2"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
