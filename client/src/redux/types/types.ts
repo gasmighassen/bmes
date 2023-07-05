@@ -22,4 +22,6 @@ export interface Image {
   public_id: string;
   folder: string;
   secure_url: string;
+  format: string;
+  created_at: string;
 }

@@ -20,7 +20,7 @@ const Portfolio = (props: Props) => {
         />
         <CategoryCard
           media="/images/caroussel-image-3.jpg"
-          service=" Contrôle de qualité et suivi du chantier"
+          service="Contrôle de qualité et suivi du chantier"
         />
         <CategoryCard
           media="/images/caroussel-image-4.jpg"

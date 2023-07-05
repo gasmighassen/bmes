@@ -15,6 +15,7 @@ import UserPrivateRoute from "./private/UserPrivateRoute";
 import Profile from "./pages/profile/Profile";
 import AuthRoute from "./private/AuthRoute";
 import PortfolioImgCard from "./pages/portfolio/PortfolioImgCard";
+import PortfolioSharedLayout from "./pages/portfolio/PortfolioSharedLayout";
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
             <Route index element={<Service />} />
           </Route>
           <Route path="portfolio" element={<Portfolio />} />
-          <Route path=":service" element={<PortfolioImgCard />} />
+          <Route element={<PortfolioSharedLayout />}>
+            <Route index path=":service" element={<PortfolioImgCard />} />
+          </Route>
 
           <Route path="devis" element={<Devis />} />
           <Route path="about" element={<About />} />
