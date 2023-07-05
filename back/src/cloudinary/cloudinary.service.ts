@@ -20,11 +20,12 @@ export class CloudinaryService {
       }
 
       const data = await response.json();
-
       const images = data.resources.map((resource) => ({
         public_id: resource.asset_id,
         folder: resource.folder,
         secure_url: resource.secure_url,
+        format: resource.format,
+        created_at: resource.created_at,
       }));
 
       return images;

@@ -1,0 +1,81 @@
+@import "./preset.less";
+.portfolio__nav_container {
+  display: contents;
+}
+.portfolio_nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  position: sticky;
+  top: 75px;
+  background-color: @bmes_primary;
+  padding-bottom: 1%;
+  a {
+    text-decoration: none;
+    color: @bmes_white;
+    font-family: @bmes_poppins;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio_nav {
+    position: fixed;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255);
+    left: 17px;
+    width: 100%;
+    transform: translateX(-110%);
+    transition: all 0.45s;
+    filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25))
+      drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+    padding: 2%;
+    height: 35vh;
+  }
+  .open {
+    transform: translateX(-17px);
+    z-index: 80;
+
+    a {
+      text-decoration: none;
+      color: @bmes_primary;
+      font-family: @bmes_poppins;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .portfolio__nav_container {
+    display: block;
+  }
+  .toggle_portfolio_nav {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    background-color: @bmes_primary;
+    border-radius: 50%;
+    position: fixed;
+    right: -35px;
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    z-index: 88;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-15px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
