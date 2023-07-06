@@ -105,7 +105,10 @@ const PortfolioImgCard = (props: Props) => {
         ))}
       </div>{" "}
       {openModal && (
-        <div className="bmes_portfolio_images_caroussel" ref={modalRef}>
+        <div
+          className="bmes_portfolio_images_caroussel animate__animated animate__slideInLeft"
+          ref={modalRef}
+        >
           <div className="close_caroussel_portfolio">
             <div className="modal__menu">
               <CloseOutlined onClick={() => setOpenModal(false)} />
@@ -122,6 +125,7 @@ const PortfolioImgCard = (props: Props) => {
             <Carousel
               autoPlay={false}
               animation={"fade"}
+              duration={700}
               swipe={false}
               navButtonsAlwaysVisible
               index={activeImage}
