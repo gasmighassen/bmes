@@ -491,6 +491,7 @@
 .bmes_service_portfolio_images {
   flex-basis: 23.1%;
   height: 45vh;
+  border: 1px #00000059 solid;
 }
 .bmes_service_portfolio_images img {
   width: 100%;
@@ -506,15 +507,26 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #0b0b0bc9;
+  background-color: #0b0b0bed;
   z-index: 200;
 }
 .bmes_portfolio_images_caroussel .close_caroussel_portfolio {
   color: white;
 }
-.bmes_portfolio_images_caroussel .close_caroussel_portfolio .anticon-close svg {
-  width: 40px;
-  height: 40px;
+.bmes_portfolio_images_caroussel .close_caroussel_portfolio .anticon-close svg,
+.bmes_portfolio_images_caroussel .close_caroussel_portfolio .anticon-zoom-in svg,
+.bmes_portfolio_images_caroussel .close_caroussel_portfolio .anticon-zoom-out svg {
+  width: 20px;
+  height: 20px;
+}
+.modal__menu {
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  cursor: pointer;
 }
 .bmes_active_portfolio_image {
   width: 100%;
@@ -528,6 +540,11 @@
   width: 80%;
   height: 85%;
   object-fit: contain;
+}
+.zoomed_in img {
+  width: 80%;
+  height: 85%;
+  object-fit: cover !important;
 }
 .css-ohwg9z {
   position: relative;
