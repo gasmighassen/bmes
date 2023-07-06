@@ -1,6 +1,6 @@
 @import "./preset.less";
 
-.bmes__login__section {
+.bmes__devis__section {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -11,19 +11,26 @@
   background-size: cover;
   background-position: bottom;
 }
-.register_Wrap {
+.devis_Wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 95%;
   width: 50%;
   font-family: "Poppins", sans-serif;
-  background-color: rgba(255, 255, 255, 0.753);
+  background-color: rgba(255, 255, 255, 0.741);
   border-radius: 7px;
   h1 {
     font-weight: 300;
     color: @bmes_primary;
   }
+}
+.ant-select-selector,
+.ant-select-selector,
+:placeholder-shown {
+  border-color: black !important;
+
+  color: black !important;
 }
 .action__iam {
   width: 100%;
@@ -32,13 +39,18 @@
   align-items: center;
   justify-content: center;
 }
-.register_Form {
+.devis_Form {
   width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  h4 {
+    font-style: italic;
+    font-weight: 200;
+    text-align: center;
+  }
 }
 .forgot__psw {
   text-align: center;
@@ -49,6 +61,9 @@
   flex-direction: column;
   justify-content: left;
   row-gap: 20px;
+  p {
+    color: @bmes_primary;
+  }
 }
 
 .formTextItem {
@@ -57,7 +72,7 @@
   padding: 10px;
   outline: none;
 }
-.loginBtn {
+.sendBtn {
   width: 100%;
   background-color: @bmes_primary;
   text-decoration: none;
@@ -71,7 +86,7 @@
   cursor: pointer;
 }
 @media (max-width: 700px) {
-  .register_Wrap {
+  .devis_Wrap {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +95,7 @@
     font-family: "Poppins", sans-serif;
     padding: 2%;
   }
-  .register_Form {
+  .devis_Form {
     margin: auto;
     width: 90%;
     height: 100%;
@@ -90,7 +105,7 @@
     align-items: center;
     gap: 1rem;
   }
-  .register_Wrap h1 {
+  .devis_Wrap h1 {
     font-weight: 300;
     color: #26396c;
     text-align: center;

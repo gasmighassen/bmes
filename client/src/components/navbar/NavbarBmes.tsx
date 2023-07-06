@@ -81,7 +81,7 @@ const NavbarBmes = (props: Props) => {
         >
           <SolutionOutlined className="button_icon" /> Demande DEVIS
         </NavLink>{" "}
-        {isAuth ? (
+     {/*    {isAuth ? (
           <>
             {" "}
             <NavLink
@@ -111,7 +111,7 @@ const NavbarBmes = (props: Props) => {
           >
             <LoginOutlined className="button_icon" /> Connecté
           </NavLink>
-        )}
+        )} */}
         <div className="bmes__nav_contact">
           {" "}
           <NavLink

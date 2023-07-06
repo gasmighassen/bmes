@@ -34,14 +34,14 @@ function App() {
           <Route path="devis" element={<Devis />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<ContactUs />} />
-          <Route element={<AuthRoute />}>
+        {/*   <Route element={<AuthRoute />}>
             <Route path="login" element={<Login />} />{" "}
             <Route path="register" element={<Register />} />{" "}
           </Route>
 
           <Route element={<UserPrivateRoute />}>
             <Route path="profile" element={<Profile />} />{" "}
-          </Route>
+          </Route> */}
         </Route>
       </Routes>
     </>
