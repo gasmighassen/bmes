@@ -1,6 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import "../../_dist/ServiceSection.css";
 import YouTube, { YouTubeProps } from "react-youtube";
+
 interface IServiceProps extends HTMLAttributes<HTMLDivElement> {
   banner?: string;
   media?: string;
@@ -8,8 +9,11 @@ interface IServiceProps extends HTMLAttributes<HTMLDivElement> {
 
 const ServiceSection = ({ banner, media, ...props }: IServiceProps) => {
   const onPlayerReady: YouTubeProps["onReady"] = (event) => {
-    event.target.pauseVideo();
+    if (event.target) {
+      event.target.pauseVideo();
+    }
   };
+
   const opts: YouTubeProps["opts"] = {
     height: "390",
     width: "640",
@@ -17,17 +21,18 @@ const ServiceSection = ({ banner, media, ...props }: IServiceProps) => {
       autoplay: 0,
     },
   };
+
   return (
     <div id={props.id} className="bmes__service__details">
       <div className="bmes__service__banner">
-        {banner ? <img src={banner} alt="" /> : null}
+        {banner && <img src={banner} alt="" />}
       </div>
       <div className="bmes__service__content">
         <div className="bmes__service__text_details">{props.children}</div>
         <div className="bmess__service__media">
-          {media ? (
+          {media && (
             <YouTube videoId={media} opts={opts} onReady={onPlayerReady} />
-          ) : null}
+          )}
         </div>
       </div>
     </div>
