@@ -19,7 +19,7 @@ type Props = {};
 const PortfolioImgCard = (props: Props) => {
   const [openModal, setOpenModal] = useState(false);
   const [activeImage, setActiveImage] = useState<number>();
-  const [zoomed, setZoomed] = useState(false);
+  const [zoomed, setZoomed] = useState(true);
   const modalRef = useRef<HTMLDivElement>(null);
 
   const serviceParam = useParams();
@@ -68,11 +68,12 @@ const PortfolioImgCard = (props: Props) => {
   }, [openModal, activeImage]);
 
   const serviceFolderMap: { [key: string]: string } = {
-    Etude_et_conception: "bmes_service_1",
-    Solutions_Techniques: "bmes_service_2",
-    Contrôle_de_qualité_et_suivi_du_chantier: "bmes_service_3",
-    Exécution: "bmes_service_4",
-    Autres_Services: "bmes_service_5",
+    Plomberie: "Plomberie",
+    electricité: "electricité",
+    exécution: "exécution",
+    structure: "structure",
+    intérieur: "intérieur",
+    exterieur: "exterieur",
   };
 
   const folderName = serviceFolderMap[serviceParam.service];
@@ -88,25 +89,27 @@ const PortfolioImgCard = (props: Props) => {
           <div key={index} className="bmes_service_portfolio_images">
             {el.format === "jpg" ? (
               <img
+                className="bmes_img"
                 src={el.secure_url}
                 alt=""
                 loading="lazy"
                 onClick={() => handleActiveImage(index)}
               />
             ) : (
-              <iframe
-                className="bmes_vedio_portfolio"
-                frameBorder={0}
-                allowFullScreen
-                src={el.secure_url}
-              />
+              <div className="bmes_vedio_portfolio">
+                <div
+                  className="bmes_video_overlay"
+                  onClick={() => handleActiveImage(index)}
+                ></div>
+                <iframe frameBorder={0} allowFullScreen src={el.secure_url} />
+              </div>
             )}
           </div>
         ))}
       </div>{" "}
       {openModal && (
         <div
-          className="bmes_portfolio_images_caroussel animate__animated animate__slideInLeft"
+          className="bmes_portfolio_images_caroussel animate__animated animate__zoomIn"
           ref={modalRef}
         >
           <div className="close_caroussel_portfolio">
@@ -146,7 +149,16 @@ const PortfolioImgCard = (props: Props) => {
                       : "bmes_active_portfolio_image zoomed_in"
                   }
                 >
-                  <img key={i} src={item.secure_url} />
+                  {item.format === "jpg" ? (
+                    <img key={i} src={item.secure_url} />
+                  ) : (
+                    <iframe
+                      className="bmes_vedio_portfolio"
+                      frameBorder={0}
+                      allowFullScreen
+                      src={item.secure_url}
+                    />
+                  )}
                 </div>
               ))}
             </Carousel>

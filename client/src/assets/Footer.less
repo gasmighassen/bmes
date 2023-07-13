@@ -8,6 +8,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background-color: @bmes_primary;
+  color: white;
   p,
   a {
     font-family: @bmes_montserrat;
@@ -15,7 +17,7 @@
     font-style: normal;
     text-decoration: none;
     &:visited {
-      color: black;
+      color: rgb(252, 252, 252);
     }
   }
 }
@@ -40,6 +42,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 18rem;
+  padding-top: 2%;
 }
 .copyrights {
   display: flex;
@@ -54,5 +58,13 @@
     a {
       font-size: 11px;
     }
+  }
+  .bmes__footer_details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    padding-top: 2%;
   }
 }

@@ -37,7 +37,6 @@ const Devis = ({}: Props) => {
   const form = useRef<HTMLFormElement>(null);
   useEffect(() => {
     if (form.current) {
-    
       form.current.setAttribute("rel", "prefetch");
     }
   }, []);

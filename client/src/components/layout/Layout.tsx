@@ -1,8 +1,7 @@
-
 import NavbarBmes from "../navbar/NavbarBmes";
 import { Outlet } from "react-router-dom";
 import "../../_dist/App.css";
-
+import Footer from "../footer/Footer";
 
 type Props = {};
 
@@ -13,7 +12,6 @@ const Layout = (props: Props) => {
       <div className="bmes__outlet">
         <Outlet />
       </div>
-   
     </section>
   );
 };

@@ -19,12 +19,12 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(
           if (entry.isIntersecting) {
             cardRef.current?.classList.add(
               "animate__animated",
-              "animate__pulse"
+              "animate__slideInLeft"
             );
           } else {
             cardRef.current?.classList.remove(
               "animate__animated",
-              "animate__pulse"
+              "animate__slideInLeft"
             );
           }
         });
