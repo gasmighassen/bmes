@@ -12,22 +12,22 @@ const PortfolioImagesNav = () => {
       ></div>
       <div className={openServiceNav ? "portfolio_nav  open" : "portfolio_nav"}>
         <Link
-          to={"/Etude_et_conception"}
+          to={"/Plomberie"}
           onClick={() => setOpenServiceNav(!openServiceNav)}
         >
-          Etude et conception
+          Plomberie
         </Link>
         <Link
-          to={"/Solutions_Techniques"}
+          to={"/exterieur"}
           onClick={() => setOpenServiceNav(!openServiceNav)}
         >
-          Solutions Techniques
+          exterieur
         </Link>
         <Link
-          to={"/Contrôle_de_qualité_et_suivi_du_chantier"}
+          to={"/intérieur"}
           onClick={() => setOpenServiceNav(!openServiceNav)}
         >
-          Contrôle de qualité et suivi du chantier
+          intérieur
         </Link>
         <Link
           to={"/Exécution"}

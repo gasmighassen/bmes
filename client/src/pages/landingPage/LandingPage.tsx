@@ -17,8 +17,34 @@ const LandingPage = (props: Props) => {
       <div className="bmes__upper__caroussel">
         <CarousselBmes autoplay interval={10000}>
           <div className="bmes__landing__caroussel__item">
+            <img src="/images/1-1.jpg" alt="" />
+            <div className="overLay__bmes animate__animated animate__bounceInLeft">
+              <h2>
+                Une maison moderne, confortable et luxueuse est l'harmonie
+                <span className="highlight"> IDÉALE</span> que nos experts
+                jouent.
+              </h2>
+            </div>
+          </div>
+          <div className="bmes__landing__caroussel__item">
+            <img src="/images/3.jpg" alt="" />
+            <div className="overLay__bmes animate__animated animate__bounceInLeft">
+              <h1>Obtenez une estimation gratuite !</h1>
+              <h2>Tous les services du bâtiment en un seul endroit</h2>
+            </div>
+          </div>
+          <div className="bmes__landing__caroussel__item">
+            <img src="/images/4.jpg" alt="" />
+            <div className="overLay__bmes animate__animated animate__bounceInLeft">
+              <h1>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus,
+                beatae.
+              </h1>
+            </div>
+          </div>
+          <div className="bmes__landing__caroussel__item">
             <img src="/images/1.jpg" alt="" />
-            <div className="overLay__bmes">
+            <div className="overLay__bmes animate__animated animate__bounceInLeft">
               <h1>Obtenez une estimation gratuite !</h1>
               <h2>
                 Vous avez un projet de construction ou de rénovation ? Pour
@@ -31,54 +57,27 @@ const LandingPage = (props: Props) => {
               </ButtonBmes>
             </div>
           </div>
-          <div className="bmes__landing__caroussel__item">
-            <img src="/images/2.jpg" alt="" />
-            <div className="overLay__bmes">
-              <h1>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus,
-                beatae.
-              </h1>
-            </div>
-          </div>
-          <div className="bmes__landing__caroussel__item">
-            <img src="/images/3.jpg" alt="" />
-            <div className="overLay__bmes">
-              <h1>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus,
-                beatae.
-              </h1>
-            </div>
-          </div>
-          <div className="bmes__landing__caroussel__item">
-            <img src="/images/4.jpg" alt="" />
-            <div className="overLay__bmes">
-              <h1>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus,
-                beatae.
-              </h1>
-            </div>
-          </div>
         </CarousselBmes>
       </div>
       <div className="bmes__who_are_we">
-        <h1 className="animate__fadeInDown animate__animated">
+        <h1 className=" animate__animated animate__fadeInDown">
           L'entreprise idéale pour votre maison
         </h1>
-        <div className="bmes__who__are_we_text animate__fadeInDown animate__animated">
+        <div className="bmes__who__are_we_text animate__animated animate__fadeInDown">
           <span>Ben Mohamed études et services (BMES)</span>
           <p>
             est une entreprise spécialisée dans la conception et construction
             des bâtiments dès le permis de bâtir jusqu'au rangement des meubles.
           </p>
         </div>
-        <div className="bmes__who__are_we_text animate__fadeInDown animate__animated">
+        <div className="bmes__who__are_we_text animate__animated animate__fadeInDown">
           <span>Ben Mohamed études et services (BMES)</span>
           <p>
             sert à vous fournir des études structurales et architecturales afin
             de prévoir des solutions techniques selon votre budget.
           </p>
         </div>
-        <div className="bmes__who__are_we_text animate__fadeInDown animate__animated">
+        <div className="bmes__who__are_we_text animate__animated animate__fadeInDown">
           <span>Ben Mohamed études et services (BMES)</span>
           <p>
             propose à ses clients divers services dans des différents domaines

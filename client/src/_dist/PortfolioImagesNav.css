@@ -476,6 +476,7 @@
   top: 75px;
   background-color: #26396c;
   padding-bottom: 1%;
+  z-index: 1;
 }
 .portfolio_nav a {
   text-decoration: none;

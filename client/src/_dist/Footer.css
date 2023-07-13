@@ -471,6 +471,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background-color: #26396c;
+  color: white;
 }
 .bmes__footer p,
 .bmes__footer a {
@@ -481,7 +483,7 @@
 }
 .bmes__footer p:visited,
 .bmes__footer a:visited {
-  color: black;
+  color: #fcfcfc;
 }
 .bmes__footer__item {
   flex-basis: 33%;
@@ -504,6 +506,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 18rem;
+  padding-top: 2%;
 }
 .copyrights {
   display: flex;
@@ -516,5 +520,13 @@
   .bmes__footer p,
   .bmes__footer a {
     font-size: 11px;
+  }
+  .bmes__footer_details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    padding-top: 2%;
   }
 }
