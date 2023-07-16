@@ -8,9 +8,16 @@ import BmesMap from "../../components/map/BmesMap";
 import Footer from "../../components/footer/Footer";
 import ButtonBmes from "../../components/button/ButtonBmes";
 import { useNavigate } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 type Props = {};
 
 const LandingPage = (props: Props) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const navigate = useNavigate();
   return (
     <div className="bmes-landing">
@@ -60,24 +67,22 @@ const LandingPage = (props: Props) => {
         </CarousselBmes>
       </div>
       <div className="bmes__who_are_we">
-        <h1 className=" animate__animated animate__fadeInDown">
-          L'entreprise idéale pour votre maison
-        </h1>
-        <div className="bmes__who__are_we_text animate__animated animate__fadeInDown">
+        <h1 className="">L'entreprise idéale pour votre maison</h1>
+        <div className="bmes__who__are_we_text" data-aos="zoom-in-down">
           <span>Ben Mohamed études et services (BMES)</span>
           <p>
             est une entreprise spécialisée dans la conception et construction
             des bâtiments dès le permis de bâtir jusqu'au rangement des meubles.
           </p>
         </div>
-        <div className="bmes__who__are_we_text animate__animated animate__fadeInDown">
+        <div className="bmes__who__are_we_text" data-aos="zoom-in-down">
           <span>Ben Mohamed études et services (BMES)</span>
           <p>
             sert à vous fournir des études structurales et architecturales afin
             de prévoir des solutions techniques selon votre budget.
           </p>
         </div>
-        <div className="bmes__who__are_we_text animate__animated animate__fadeInDown">
+        <div className="bmes__who__are_we_text" data-aos="zoom-in-down">
           <span>Ben Mohamed études et services (BMES)</span>
           <p>
             propose à ses clients divers services dans des différents domaines
