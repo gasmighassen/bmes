@@ -26,6 +26,7 @@ const PortfolioImgCard = (props: Props) => {
   const dispatch = useDispatch();
   const { getImages } = bindActionCreators(imagesActionCreator, dispatch);
   const gallery = useSelector((state: any) => state.images.images);
+  console.log(gallery);
   const handleActiveImage = (element: number) => {
     setActiveImage(element);
     setOpenModal(true);
@@ -77,10 +78,11 @@ const PortfolioImgCard = (props: Props) => {
   };
 
   const folderName = serviceFolderMap[serviceParam.service];
-
+  console.log(folderName);
   const filteredImages = gallery.filter(
     (el: Image) => el.folder === folderName
   );
+  console.log(filteredImages);
   return (
     <>
       {" "}

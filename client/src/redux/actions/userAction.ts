@@ -23,7 +23,6 @@ import {
 } from "../actionTypes/userActionTypes";
 import { User } from "../types/types";
 
-
 export const loginUser = (login) => async (dispatch: Dispatch<UserAction>) => {
   dispatch({ type: LOGIN_USER_REQUEST, payload: "sent" });
 
@@ -34,7 +33,6 @@ export const loginUser = (login) => async (dispatch: Dispatch<UserAction>) => {
     localStorage.setItem("token", result.data.access_token);
   } catch (error) {
     dispatch({ type: LOGIN_USER_FAIL, payload: error });
-
   }
 };
 
@@ -56,7 +54,7 @@ export const getUsers = () => async (dispatch: Dispatch<UserAction>) => {
     }
   }
 };
-export const userCurrent = () => async (dispatch: Dispatch<UserAction>) => {
+/* export const userCurrent = () => async (dispatch: Dispatch<UserAction>) => {
   dispatch({ type: GET_CURRENT_REQUEST });
   const accessToken = localStorage.getItem("token");
   try {
@@ -70,7 +68,7 @@ export const userCurrent = () => async (dispatch: Dispatch<UserAction>) => {
   } catch (error) {
     dispatch({ type: GET_CURRENT_FAIL, payload: error });
   }
-};
+}; */
 
 export const register =
   (User: User) => async (dispatch: Dispatch<UserAction>) => {

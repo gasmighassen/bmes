@@ -16,20 +16,20 @@ type Props = {};
 const NavbarBmes = (props: Props) => {
   const dispatch = useDispatch();
 
-  const { userCurrent } = bindActionCreators(userActionCreator, dispatch);
+
   const isAuth = useSelector((state: any) => state.user.isAuth);
   const { logout } = bindActionCreators(userActionCreator, dispatch);
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [connected, setConnected] = useState(isAuth);
 
-  useEffect(() => {
+/*   useEffect(() => {
     userCurrent();
 
     return () => {
       setConnected(isAuth);
     };
-  }, [isAuth]);
+  }, [isAuth]); */
 
   return (
     <div className="bmes__navbar">
